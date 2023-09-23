@@ -11,7 +11,7 @@ return Field::make('complex', 'buttons', __('Buttons'))->add_fields([
             $result[$item->ID] = $item->post_title;
 
             return $result;
-        })
+        }) ?? []
     ),
     Field::make('text', 'text', __('Text')),
 ]);
