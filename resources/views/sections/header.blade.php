@@ -1,18 +1,20 @@
 <header>
-  <div class="hidden border-b border-blue border-opacity-25 pb-3 pt-4 lg:block">
-    <div class="container max-w-none">
-      <nav>
-        <ul class="flex flex-row items-center justify-end gap-8 font-semibold">
-          @foreach ($secondaryNavigation as $item)
-            <li>
-              <a class="{{ carbon_get_nav_menu_item_meta($item->id, 'crb_is_button') ? 'border-2 border-yellow rounded-full px-4 py-1' : ' ' }} inline-block text-blue text-opacity-70"
-                href="{{ $item->url }}">{!! $item->label !!}</a>
-            </li>
-          @endforeach
-        </ul>
-      </nav>
+  @if ($secondaryNavigation)
+    <div class="hidden border-b border-blue border-opacity-25 pb-3 pt-4 lg:block">
+      <div class="container max-w-none">
+        <nav>
+          <ul class="flex flex-row items-center justify-end gap-8 font-semibold">
+            @foreach ($secondaryNavigation as $item)
+              <li>
+                <a class="{{ carbon_get_nav_menu_item_meta($item->id, 'crb_is_button') ? 'border-2 border-yellow rounded-full px-4 py-1' : ' ' }} inline-block text-blue text-opacity-70"
+                  href="{{ $item->url }}">{!! $item->label !!}</a>
+              </li>
+            @endforeach
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
+  @endif
   <div class="">
     <div class="container flex max-w-none items-center justify-center lg:justify-between">
       <a class="font-heading flex flex-row items-center gap-1.5 py-3 text-2xl font-bold tracking-tight lg:py-6 lg:text-3xl"
@@ -25,15 +27,18 @@
 
         {!! $siteName !!}
       </a>
-      <nav class="hidden lg:block">
-        <ul class="flex flex-row gap-12">
-          @foreach ($primaryNavigation as $item)
-            <li>
-              <a class="inline-block py-2 text-lg font-semibold" href="{{ $item->url }}">{!! $item->label !!}</a>
-            </li>
-          @endforeach
-        </ul>
-      </nav>
+      @if ($primaryNavigation)
+        <nav class="hidden lg:block">
+          <ul class="flex flex-row gap-12">
+            @foreach ($primaryNavigation as $item)
+              <li>
+                <a class="inline-block py-2 text-lg font-semibold"
+                  href="{{ $item->url }}">{!! $item->label !!}</a>
+              </li>
+            @endforeach
+          </ul>
+        </nav>
+      @endif
     </div>
   </div>
 </header>
