@@ -3,7 +3,7 @@
     @if (carbon_get_theme_option('newsletter_url'))
       <form action="{{ carbon_get_theme_option('newsletter_url') }}" method="POST">
         <h2 class="mb-6 max-w-sm text-3xl font-bold leading-tight">{!! nl2br(carbon_get_theme_option('newsletter_title')) !!}</h2>
-        <input class="bg-transparent rounded-full border-2 border-white py-2 pl-8 pr-20" type="email"
+        <input class="rounded-full border-2 border-white bg-transparent py-2 pl-8 pr-20" type="email"
           placeholder="Enter your email address" />
         <button class="-ml-12 rounded-full border-2 border-white bg-blue px-8 py-2"
           type="submit">{{ carbon_get_theme_option('newsletter_button_text') }}</button>
@@ -22,18 +22,19 @@
             @endif
           @endforeach
         </div>
-
-        <div class="">
-          <nav>
-            <ul class="columns-2 gap-8 font-semibold">
-              @foreach ($secondaryNavigation as $item)
-                <li>
-                  <a class="inline-block" href="{{ $item->url }}">{{ $item->label }}</a>
-                </li>
-              @endforeach
-            </ul>
-          </nav>
-        </div>
+        @if ($secondaryNavigation)
+          <div class="">
+            <nav>
+              <ul class="columns-2 gap-8 font-semibold">
+                @foreach ($secondaryNavigation as $item)
+                  <li>
+                    <a class="inline-block" href="{{ $item->url }}">{{ $item->label }}</a>
+                  </li>
+                @endforeach
+              </ul>
+            </nav>
+          </div>
+        @endif
 
       </div>
       @if (carbon_get_theme_option('footer_text'))
