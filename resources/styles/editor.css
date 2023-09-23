@@ -1,0 +1,22 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'common/global';
+
+.editor-styles-wrapper {
+  @apply font-sans 2xl:text-lg text-blue;
+}
+
+.wp-block:not([data-type^='carbon']) {
+  max-width: var(--wp--style--global--content-size);
+  @apply mx-auto !important;
+}
+
+.wp-block[data-type^='carbon'] {
+  @apply max-w-none !important;
+}
+
+.editor-post-title__input {
+  @apply text-6xl mt-24 mb-16 font-normal font-serif;
+}

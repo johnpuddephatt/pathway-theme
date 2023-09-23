@@ -1,0 +1,45 @@
+@layer base {
+  /* @font-face {
+    font-family: 'PWSerif';
+    font-weight: 700;
+    src: url(@fonts/Athelas-Bold.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'PWSerif';
+    font-weight: 700;
+    font-style: italic;
+    src: url(@fonts/Athelas-BoldItalic.woff2) format('woff2');
+  } */
+
+  @font-face {
+    font-family: 'PWSerif';
+    font-weight: 400;
+    src: url(@fonts/Athelas-Regular.woff2) format('woff2');
+  }
+
+  /* @font-face {
+    font-family: 'PWSerif';
+    font-weight: 400;
+    font-style: italic;
+    src: url(@fonts/Athelas-Italic.woff2) format('woff2');
+  } */
+
+  @font-face {
+    font-family: 'PWSans';
+    font-weight: 700;
+    src: url(@fonts/Euclid-Circular-B-Bold.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'PWSans';
+    font-weight: 600;
+    src: url(@fonts/Euclid-Circular-B-SemiBold.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'PWSans';
+    font-weight: 400;
+    src: url(@fonts/Euclid-Circular-B-Medium.woff2) format('woff2');
+  }
+}

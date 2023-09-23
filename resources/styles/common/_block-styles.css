@@ -1,0 +1,35 @@
+.wp-block-heading {
+  @apply text-2xl text-blue font-semibold;
+}
+
+h2.wp-block-heading {
+  @apply text-4xl;
+}
+
+h3.wp-block-heading {
+  @apply text-2xl;
+}
+
+.post-content .wp-block-button__link,
+.page-content .wp-block-button__link,
+.page-content .wp-block-file__button,
+.post-content .wp-block-file__button {
+  @apply !no-underline text-white;
+}
+
+.wp-block-table.is-style-pills table {
+  @apply border-collapse border-white bg-yellow;
+}
+
+.wp-block-table.is-style-pills table.has-blue-background-color th {
+  @apply text-white;
+}
+
+.wp-block-table.is-style-pills td,
+.wp-block-table.is-style-pills th {
+  @apply border-white border-8  px-4 py-2 bg-white bg-opacity-95;
+}
+
+.wp-block-table.is-style-pills th {
+  @apply bg-opacity-0;
+}
