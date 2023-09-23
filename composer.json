@@ -29,12 +29,6 @@
   "keywords": [
     "wordpress"
   ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    }
-  ],
   "support": {
     "issues": "https://github.com/roots/sage/issues",
     "forum": "https://discourse.roots.io/"
