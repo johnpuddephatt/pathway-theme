@@ -8,6 +8,11 @@
     </svg>
   </div>
 
+   <div
+    class="{{ isset($background_colour) ? str_replace('bg-', 'from-', $background_colour) : 'from-beige' }} pointer-events-none absolute h-full w-1/3 bg-gradient-to-r from-15% to-transparent">
+  </div>
+
+
   <div class="container flex-none py-16">
     <div class="relative">
       @if (get_option('page_for_people') && get_permalink(get_option('page_for_people')))

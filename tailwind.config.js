@@ -3,7 +3,12 @@
 import typography from '@tailwindcss/typography';
 
 const config = {
-  content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
+  content: [
+    './index.php',
+    './app/**/*.php',
+    './resources/**/*.{php,vue,js}',
+    'safelist.txt',
+  ],
   theme: {
     container: {
       center: true,

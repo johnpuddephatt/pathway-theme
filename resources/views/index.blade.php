@@ -13,7 +13,7 @@
         <x-post-card :post="get_post()" />
       @endwhile
 
-      <div class="container mb-16 text-center text-xl">
+      <div class="container mb-16 text-right text-xl">
         {!! paginate_links([
             'prev_text' => '<',
             'next_text' => '>',

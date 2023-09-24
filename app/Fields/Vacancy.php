@@ -8,15 +8,15 @@ use Carbon_Fields\Field;
  * Adds a custom field: "Projects page"; on the "Settings > Reading" page.
  */
 add_action( 'admin_init', function () {
-    $id = 'page_for_vacancies';
-    add_settings_field( $id, 'Vacancies page:', 'settings_field_page_for_vacancies', 'reading', 'default', array(
+    $id = 'page_for_vacancys';
+    add_settings_field( $id, 'Vacancies page:', 'settings_field_page_for_vacancys', 'reading', 'default', array(
         'label_for' => 'field-' . $id,
         'class'     => 'row-' . $id,
     ) );
 } );
 
-function settings_field_page_for_vacancies( $args ) {
-    $id = 'page_for_vacancies';
+function settings_field_page_for_vacancys( $args ) {
+    $id = 'page_for_vacancys';
     wp_dropdown_pages( array(
         'name'              => $id,
         'show_option_none'  => '&mdash; Select &mdash;',
@@ -26,7 +26,7 @@ function settings_field_page_for_vacancies( $args ) {
 }
 
 add_filter( 'allowed_options', function ( $options ) {
-    $options['reading'][] = 'page_for_vacancies';
+    $options['reading'][] = 'page_for_vacancys';
     return $options;
 } );
 

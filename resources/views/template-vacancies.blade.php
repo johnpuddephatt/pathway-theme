@@ -25,7 +25,7 @@
       </div>
     @endif
 
-    <div class="container mb-16 text-center text-xl">
+    <div class="container mb-16 text-right text-xl">
       {!! paginate_links([
           'total' => $vacancies->max_num_pages,
           'prev_text' => '<',

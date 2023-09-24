@@ -1,4 +1,4 @@
-<div class="{{ $fields->background_colour ?? 'bg-green' }} relative mb-24 overflow-hidden">
+<div class="{{ $fields->background_colour ?? 'bg-green' }} relative mb-24 overflow-hidden overflow-hidden rounded">
   <svg class="absolute -right-12 top-1/2 h-auto w-3/5 max-w-none -translate-y-1/2" xmlns="http://www.w3.org/2000/svg"
     width="1047.58" height="1050" viewBox="0 0 1047.58 1050">
     <path fill="#fff"

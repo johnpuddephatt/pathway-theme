@@ -29,7 +29,7 @@
 
           @foreach ($file_uploads as $file_upload)
             <a download href="{{ get_permalink($file_upload->ID) }}"
-              class="group flex max-w-4xl flex-row items-center bg-white p-8">
+              class="group flex max-w-4xl flex-row items-center rounded bg-white p-8">
               <div>
                 <h3 class="text-xl font-semibold">{{ $file_upload->post_title }}</h3>
                 @php($file_type_array = explode('/', $file_upload->post_mime_type))
@@ -41,7 +41,8 @@
                 </div>
               </div>
 
-              <div class="ml-auto rounded-full bg-green bg-opacity-70 p-3.5 transition group-hover:bg-opacity-100">
+              <div
+                class="ml-auto flex-none rounded-full bg-green bg-opacity-70 p-3.5 transition group-hover:bg-opacity-100">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
                   class="ml-auto h-8 w-8 text-white" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -61,12 +62,13 @@
         <div class="flex max-w-4xl flex-col gap-6">
           @foreach ($external_links as $external_link)
             <a target="_blank" href="{{ $external_link['link'] }}"
-              class="group flex max-w-4xl flex-row items-center bg-white p-8">
+              class="group flex max-w-4xl flex-row items-center rounded bg-white p-8">
               <div>
                 <h3 class="text-xl font-semibold">{{ $external_link['label'] }}</h3>
 
               </div>
-              <div class="ml-auto rounded-full bg-green bg-opacity-70 p-3.5 transition group-hover:bg-opacity-100">
+              <div
+                class="ml-auto flex-none rounded-full bg-green bg-opacity-70 p-3.5 transition group-hover:bg-opacity-100">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
                   class="ml-auto h-8 w-8 text-white" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -87,8 +89,10 @@
   <div class="container my-16">
     <h2 class="mb-8 text-3xl font-semibold">Related resources</h2>
 
-    @foreach ($related_resources as $resource)
-      <x-resource-card :resource="$resource" />
-    @endforeach
+    <div class="flex flex-col gap-6">
+      @foreach ($related_resources as $resource)
+        <x-resource-card :resource="$resource" />
+      @endforeach
+    </div>
   </div>
 @endif

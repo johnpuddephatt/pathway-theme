@@ -43,7 +43,7 @@
       @endwhile
     </div>
   @endif
-  <div class="mb-16 text-center text-xl">
+  <div class="mb-16 text-right text-xl">
     {!! paginate_links([
         'total' => $press_releases->max_num_pages,
         'prev_text' => '<',

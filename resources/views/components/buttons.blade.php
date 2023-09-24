@@ -7,7 +7,7 @@
 
       @if ($page)
         <a href="{{ get_permalink($page) }}"
-          class="{{ $invert ? 'bg-white ' : 'bg-yellow' }} inline-block rounded-full bg-opacity-80 px-8 py-2.5 font-semibold transition duration-300 hover:bg-opacity-100">{{ $button['text'] ?: $page->post_title }}</a>
+          class="{{ $invert ? 'bg-white ' : 'bg-yellow' }} inline-block rounded-full bg-opacity-80 px-10 py-2.5 font-semibold transition duration-300 hover:bg-opacity-100">{{ $button['text'] ?: $page->post_title }}</a>
       @endif
     @endforeach
   </div>

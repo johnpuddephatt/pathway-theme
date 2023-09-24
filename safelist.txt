@@ -1,0 +1,5 @@
+from-blue
+from-yellow
+from-pink
+from-green
+rounded-3xl

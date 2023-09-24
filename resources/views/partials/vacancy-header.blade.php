@@ -15,7 +15,7 @@
           &gt;</a>
       @endif
 
-      <h1 class="mb-4 max-w-sm font-serif text-6xl">{!! $title ?? get_the_title() !!}</h1>
+      <h1 class="mb-4 max-w-md font-serif text-6xl">{!! $title ?? get_the_title() !!}</h1>
 
       {!! get_the_post_thumbnail($page_id ?? null, 'square', [
           'class' => 'right-0 top-full absolute clip-hex max-w-none flex-none block w-96  h-auto  object-cover',

@@ -1,4 +1,6 @@
 <div class="{{ $background_colour ?? 'bg-pink' }} relative mb-24 flex min-h-[25rem] flex-row items-center">
+
+
   <div class="pointer-events-none absolute inset-0 left-0 top-0 h-full w-full overflow-hidden">
     <svg class="absolute -left-16 top-1/2 h-auto w-3/5 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="988.81"
       height="992.23" viewBox="0 0 988.81 992.23">
@@ -8,6 +10,12 @@
     </svg>
   </div>
 
+   <div
+    class="{{ isset($background_colour) ? str_replace('bg-', 'from-', $background_colour) : 'from-pink' }} pointer-events-none absolute h-full w-1/3 bg-gradient-to-r from-15% to-transparent">
+  </div>
+
+
+
   <div class="container flex-none py-16">
     <div class="relative">
       @if ($posts_page_id = get_option('page_for_' . get_post_type(get_the_ID()) . 's'))
@@ -15,9 +23,9 @@
           &gt;</a>
       @endif
 
-      <h1 class="mb-4 max-w-sm font-serif text-6xl">{!! $title ?? get_the_title() !!}</h1>
+      <h1 class="mb-6 max-w-4xl font-serif text-6xl">{!! $title ?? get_the_title() !!}</h1>
       @if (isset($subtitle))
-        <p class="max-w-sm text-xl font-semibold">{!! $subtitle !!}</h2>
+        <p class="max-w-sm text-2xl">{!! $subtitle !!}</h2>
         @else
           @include('partials.entry-meta')
       @endif

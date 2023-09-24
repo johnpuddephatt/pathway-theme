@@ -26,7 +26,7 @@
   <div x-data="{ show_all: false }" class="bg-beige bg-opacity-20 py-12 text-center">
     <div class="container grid grid-cols-3 gap-x-8 gap-y-4">
       @foreach ($key_issues as $issue)
-        <a href="{{ get_permalink($issue->ID) }}" class="bg-beige px-6 py-4 text-center">
+        <a href="{{ get_permalink($issue->ID) }}" class="rounded bg-beige px-6 py-4 text-center">
           <h2 class="font-bold">{!! $issue->post_title !!}</h2>
         </a>
       @endforeach
@@ -37,7 +37,7 @@
 
     <div x-show="show_all" x-transition class="container mt-8 grid grid-cols-3 gap-x-8 gap-y-4">
       @foreach ($issues as $issue)
-        <a href="{{ get_permalink($issue->ID) }}" class="bg-beige bg-opacity-50 px-6 py-4 text-center">
+        <a href="{{ get_permalink($issue->ID) }}" class="rounded bg-beige bg-opacity-50 px-6 py-4 text-center">
           <h2 class="font-bold">{!! $issue->post_title !!}</h2>
         </a>
       @endforeach

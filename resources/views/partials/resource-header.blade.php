@@ -4,7 +4,7 @@
     <a class="mb-6 inline-block lg:text-lg"
       href="{{ get_permalink(get_option('page_for_resources')) }}">{!! get_the_title(get_option('page_for_resources')) !!}
       &gt;</a>
-    <h1 class="mb-8 text-5xl font-bold">{{ $title }} </h1>
+    <h1 class="mb-8  text-5xl font-bold">{{ $title }} </h1>
 
     <div class="flex flex-row gap-2">
       @foreach ($types as $type)
@@ -21,5 +21,4 @@
       @endforeach
     </div>
   </div>
-
 </div>

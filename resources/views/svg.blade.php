@@ -15,7 +15,7 @@
 
   <clipPath id="clip-hex-left" clipPathUnits="objectBoundingBox">
     <path
-      d="m1,0.999,-0.795,0.001 a0.046,0.07,0,0,1,-0.04,-0.036 L0.006,0.528 a0.044,0.066,0,0,1,0.001,-0.066 L0.177,0.035 A0.046,0.07,0,0,1,0.217,0.001 L1,0" />
+      d="m1,0.999,-0.795,0 a0.046,0.07,0,0,1,-0.04,-0.036 L0.006,0.528 a0.044,0.066,0,0,1,0.001,-0.066 L0.177,0.035 A0.046,0.07,0,0,1,0.217,0 L1,0" />
   </clipPath>
 
   <clipPath id="clip-hex-bottom" clipPathUnits="objectBoundingBox">
