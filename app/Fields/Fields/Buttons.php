@@ -8,7 +8,7 @@ return Field::make('complex', 'buttons', __('Buttons'))->add_fields([
             $result,
             $item
         ) {
-            $result[$item->ID] = $item->post_title;
+            $result[(int) $item->ID] = $item->post_title;
 
             return $result;
         }) ?? []
