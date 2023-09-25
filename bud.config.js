@@ -52,7 +52,7 @@ export default async (app) => {
     .set('settings.color.defaultDuotone', false)
     .set('settings.color.defaultGradients', false)
     .set('settings.color.defaultPalette', false)
-    .set('settings.layout.contentSize', '752px')
+    .set('settings.layout.contentSize', '720px')
     .set('settings.layout.wideSize', '1100px')
     .set('settings.color.duotone', [])
     .set('settings.custom.spacing', {})
