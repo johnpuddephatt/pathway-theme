@@ -3,8 +3,17 @@
 use Carbon_Fields\Block;
 use Carbon_Fields\Field;
 
+function get_child_pages() {
+    $posts = get_posts('post_type=page&posts_per_page=-1&post_parent='  . (isset($_GET['post']) ? $_GET['post'] : null));
 
-$posts = get_posts('post_type=page&posts_per_page=-1&post_parent='  . (isset($_GET['post']) ? $_GET['post'] : null));
+    return count($posts) ? array_reduce($posts, function (
+            $result,
+            $item
+        ) {
+            $result[$item->ID] = $item->post_title;
+            return $result;
+        }) : [];
+}
 
 Block::make(__('Child pages'))
     ->add_fields([
@@ -17,13 +26,7 @@ Block::make(__('Child pages'))
             )->set_default_value('grid'),
         Field::make( 'multiselect', 'child_pages', __( 'Pages' ) )
         ->help_text('By default all child pages will be shown. If you want to show only specific pages, select them here.')
-            ->add_options(count($posts) ? array_reduce($posts, function (
-            $result,
-            $item
-        ) {
-            $result[$item->ID] = $item->post_title;
-            return $result;
-        }) : [])
+            ->add_options('get_child_pages')
     ])
     ->set_mode('preview')
     ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
