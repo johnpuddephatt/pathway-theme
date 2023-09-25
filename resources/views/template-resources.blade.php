@@ -6,7 +6,8 @@
 
 @section('content')
   <div class="border-t border-blue border-opacity-25">
-    <div class="container relative mb-12 flex flex-col overflow-hidden pt-8 md:flex-row md:items-center md:pt-12 lg:gap-8">
+    <div
+      class="container relative mb-12 flex flex-col gap-4 overflow-hidden pt-8 md:flex-row md:items-center md:pt-12 lg:gap-8">
 
       <div class="relative flex-none pt-12 md:w-1/2 lg:py-16">
 
@@ -14,7 +15,6 @@
         <div class="max-w-md text-lg font-semibold lg:text-xl">
           {!! the_excerpt() !!}
         </div>
-
       </div>
 
       {!! get_the_post_thumbnail(null, '3by2', [
