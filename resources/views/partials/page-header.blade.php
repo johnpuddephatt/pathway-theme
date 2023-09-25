@@ -14,12 +14,12 @@
         </div>
       @endif
 
-      <h2 class="max-w-3xl font-serif text-5xl text-blue xl:text-6xl">
+      <h2 class="mb-8 max-w-3xl font-serif text-5xl text-blue xl:text-6xl">
         {!! $title !!}
       </h2>
 
       @if (!empty($post->post_excerpt))
-        <p class="mb-8 mt-8 max-w-xl text-xl leading-tight text-blue lg:text-2xl">
+        <p class="mb-8 max-w-2xl text-xl leading-tight text-blue lg:text-2xl">
           {!! $post->post_excerpt !!}
         </p>
       @endif
