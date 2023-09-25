@@ -4,7 +4,7 @@
   <div class="container">
     <div class="mb-16 mt-16 flex flex-col gap-12 lg:flex-row lg:gap-8">
       @foreach (get_posts('post_type=post&posts_per_page=3&orderby=date&order=desc') as $post)
-        <div class="flex flex-col items-start lg:w-1/3">
+        <div class="relative flex flex-col items-start lg:w-1/3">
 
           <p class="text-semibold mb-2">{{ get_the_date(null, $post->ID) }}</p>
 
