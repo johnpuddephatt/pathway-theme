@@ -22,6 +22,7 @@
     <div class="relative w-1/2 py-8 pl-12 max-lg:left-1/2 lg:w-2/5">
       {!! wp_get_attachment_image($fields->image, 'thumbnail', false, [
           'class' => 'block w-full clip-hex h-auto  object-cover',
+          'sizes' => '30vw',
       ]) !!}
 
       <svg xmlns="http://www.w3.org/2000/svg"
