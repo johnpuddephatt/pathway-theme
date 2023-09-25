@@ -12,7 +12,7 @@
 
     <div class="relative">
       <h2 class="mb-6 max-w-lg font-serif text-4xl !leading-none md:text-5xl lg:mb-8">{{ $fields->title }}</h2>
-      <div class="max-w-md text-lg">
+      <div class="max-w-md text-lg font-semibold">
         {{ $fields->description }}
       </div>
       <x-buttons :buttons="$fields->buttons" :invert="$fields->background_colour == 'bg-yellow' || $fields->background_colour == 'bg-pink'" />
@@ -25,7 +25,7 @@
           <div class="clip-hex relative flex aspect-[0.9] items-center justify-center bg-white">
             <div class="text-5xl font-bold">{{ $fact['number'] }}</div>
           </div>
-          <p class="mt-2 font-semibold leading-tight lg:text-lg">{{ $fact['text'] }}</p>
+          <p class="mt-2 font-semibold !leading-tight lg:text-lg">{{ $fact['text'] }}</p>
         </div>
       @endforeach
     </div>
