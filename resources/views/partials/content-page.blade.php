@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="flex-1 lg:px-0">
-        <div class="page-content">
+        <div class="page-content" id="overview">
           {!! $content !!}
         </div>
       </div>
