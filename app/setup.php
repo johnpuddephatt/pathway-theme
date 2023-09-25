@@ -126,6 +126,7 @@ add_action(
          */
         register_nav_menus([
             'primary_navigation' => __('Primary Navigation', 'sage'),
+            'secondary_navigation' => __('Secondary Navigation', 'sage'),
         ]);
 
         /**
