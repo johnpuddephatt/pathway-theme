@@ -1,7 +1,7 @@
 <div class="relative max-lg:bg-beige lg:mb-12 xl:mb-24">
 
   {!! wp_get_attachment_image($fields->image, '2by1', false, [
-    'sizes' => '80vw'
+      'sizes' => '80vw',
       'class' =>
           'w-full max-lg:clip-hex-bottom lg:absolute max-lg:max-h-96 top-0 right-0  block lg:h-[85%]  lg:w-[calc((0.85*1536px)+((100vw-1536px)/2))] object-cover',
   ]) !!}
