@@ -4,9 +4,9 @@
       <form action="{{ carbon_get_theme_option('newsletter_url') }}" method="POST">
         <h2 class="mb-6 max-w-sm text-3xl font-bold leading-tight">{!! nl2br(carbon_get_theme_option('newsletter_title')) !!}</h2>
         <input
-          class="rounded-full border-2 border-white border-opacity-80 bg-transparent py-2.5 pl-8 pr-20 focus:border-opacity-100"
+          class="rounded-full border-2 border-white border-opacity-80 bg-transparent py-2.5 pl-4 pr-12 focus:border-opacity-100 lg:pl-8 lg:pr-20"
           type="email" placeholder="Enter your email address" />
-        <button class="-ml-12 rounded-full border-2 border-white bg-blue px-10 py-2.5 font-semibold"
+        <button class="-ml-12 rounded-full border-2 border-white bg-blue px-8 py-2.5 font-semibold lg:px-10"
           type="submit">{{ carbon_get_theme_option('newsletter_button_text') }}</button>
       </form>
     @endif

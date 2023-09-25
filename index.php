@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="2xl:text-lg scroll-smooth text-blue" <?php language_attributes(); ?>>
+<html x-data="{menuOpen: false}" :class="{'overflow-hidden': menuOpen}" class="2xl:text-lg scroll-smooth text-blue" <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

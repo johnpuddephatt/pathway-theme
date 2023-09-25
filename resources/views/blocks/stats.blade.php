@@ -1,5 +1,5 @@
 <div
-  class="{{ $fields->background_colour ?? 'bg-beige' }} container relative mb-24 flex max-w-6xl items-center justify-between gap-8 overflow-hidden rounded p-16">
+  class="{{ $fields->background_colour ?? 'bg-beige' }} relative mb-8 overflow-hidden rounded py-16 lg:container md:p-16 lg:mb-24 lg:max-w-6xl">
 
   <svg class="absolute right-1/3 top-1/2 h-auto w-full -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="988.81"
     height="992.23" viewBox="0 0 988.81 992.23">
@@ -8,22 +8,27 @@
       opacity=".1" />
   </svg>
 
-  <div class="relative">
-    <h2 class="mb-8 max-w-lg font-serif text-5xl">{{ $fields->title }}</h2>
-    <div class="max-w-md text-lg">
-      {{ $fields->description }}
-    </div>
-    <x-buttons :buttons="$fields->buttons" :invert="$fields->background_colour == 'bg-yellow' || $fields->background_colour == 'bg-pink'" />
-  </div>
+  <div class="container flex flex-col justify-between gap-12 lg:flex-row lg:items-center">
 
-  <div class="mx-auto grid w-1/3 flex-none grid-cols-2 gap-x-12 gap-y-8">
-    @foreach ($fields->facts as $fact)
-      <div class="text-center">
-        <div class="clip-hex relative flex aspect-[0.9] items-center justify-center bg-white">
-          <div class="text-5xl font-bold">{{ $fact['number'] }}</div>
-        </div>
-        <p class="mt-2 text-lg font-semibold leading-tight">{{ $fact['text'] }}</p>
+    <div class="relative">
+      <h2 class="mb-6 max-w-lg font-serif text-4xl !leading-none md:text-5xl lg:mb-8">{{ $fields->title }}</h2>
+      <div class="max-w-md text-lg">
+        {{ $fields->description }}
       </div>
-    @endforeach
+      <x-buttons :buttons="$fields->buttons" :invert="$fields->background_colour == 'bg-yellow' || $fields->background_colour == 'bg-pink'" />
+    </div>
+
+    <div
+      class="grid flex-none grid-cols-2 gap-8 max-md:max-w-[16rem] md:grid-cols-4 lg:mx-auto lg:w-1/3 lg:max-w-none lg:grid-cols-2 lg:gap-x-12 lg:gap-y-8">
+      @foreach ($fields->facts as $fact)
+        <div class="text-center">
+          <div class="clip-hex relative flex aspect-[0.9] items-center justify-center bg-white">
+            <div class="text-5xl font-bold">{{ $fact['number'] }}</div>
+          </div>
+          <p class="mt-2 font-semibold leading-tight lg:text-lg">{{ $fact['text'] }}</p>
+        </div>
+      @endforeach
+    </div>
+
   </div>
 </div>

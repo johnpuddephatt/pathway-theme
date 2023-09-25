@@ -4,7 +4,7 @@
 
 @extends('layouts.app') @section('content')
   @include('partials.section-header', ['background_colour' => 'bg-yellow'])
-  <div class="container mb-24 max-w-5xl space-y-8">
+  <div class="container mb-24 space-y-8 lg:max-w-5xl">
 
     <div class="page-content">
       {!! the_content() !!}
@@ -17,7 +17,7 @@
         </x-alert>
       </div>
     @else
-      <div class="mb-16 mt-12 flex flex-col gap-8">
+      <div class="mb-16 mt-12 flex flex-col gap-4">
         @while ($vacancies->have_posts())
           @php($vacancies->the_post())
           <x-vacancy-card :vacancy="get_post()" />

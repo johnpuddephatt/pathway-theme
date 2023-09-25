@@ -34,19 +34,31 @@ h3.wp-block-heading {
   @apply bg-opacity-0;
 }
 
-.wp-block-quote.is-style-large {
-  @apply border-l-0 pl-0 my-20;
-}
-
 .wp-block-quote p {
-  @apply text-2xl font-bold text-blue !leading-snug !not-italic mb-3;
+  @apply text-xl lg:text-2xl font-bold text-blue !leading-snug !not-italic mb-3;
 }
 
 .wp-block-quote cite {
   @apply !not-italic text-lg text-blue font-semibold;
 }
 
+.wp-block-quote.is-style-large {
+  @apply border-l-0 pl-0 my-20;
+}
+
 .wp-block-quote.is-style-large p {
+  @apply text-3xl lg:text-4xl;
+}
+
+.wp-block-quote.is-style-large cite {
+  @apply text-xl;
+}
+
+.wp-block-quote.is-style-highlight {
+  @apply border-l-0 pl-0 my-20;
+}
+
+.wp-block-quote.is-style-highlight p {
   @apply text-4xl;
 }
 

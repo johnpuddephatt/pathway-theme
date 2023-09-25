@@ -1,4 +1,4 @@
-<div class="relative my-16 overflow-hidden">
+<div class="relative overflow-hidden py-8 md:py-16">
 
   <div class="flex flex-col gap-6">
     @foreach ($child_pages as $page)

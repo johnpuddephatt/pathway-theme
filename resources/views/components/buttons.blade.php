@@ -1,7 +1,7 @@
 @props(['buttons' => null, 'invert' => false])
 
 @if ($buttons)
-  <div class="mt-8 flex flex-col items-start gap-2">
+  <div class="mt-6 flex flex-col items-start gap-2 lg:mt-8">
     @foreach ($buttons as $button)
       @php($page = get_post($button['page']))
 

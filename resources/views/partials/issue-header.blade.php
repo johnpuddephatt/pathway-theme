@@ -8,6 +8,10 @@
     </svg>
   </div>
 
+  <div
+    class="{{ isset($background_colour) ? str_replace('bg-', 'from-', $background_colour) : 'from-green' }} pointer-events-none absolute h-full w-1/3 bg-gradient-to-r from-15% to-transparent">
+  </div>
+
   <div class="container flex-none py-12">
     <div class="relative">
 

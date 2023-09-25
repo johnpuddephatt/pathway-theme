@@ -1,6 +1,6 @@
 @extends('layouts.app') @section('content')
   @include('partials.section-header', ['background_colour' => 'bg-pink'])
-  <div class="container mb-24 space-y-8" id="news">
+  <div class="container pb-24 lg:space-y-8" id="news">
 
     @if (!have_posts())
       <x-alert type="warning">
@@ -8,17 +8,20 @@
       </x-alert>
 
       {!! get_search_form(false) !!}
-      @endif @while (have_posts())
+    @endif
+
+    <div class="flex flex-col gap-4">
+      @while (have_posts())
         @php(the_post())
         <x-post-card :post="get_post()" />
       @endwhile
-
-      <div class="container mb-16 text-right text-xl">
-        {!! paginate_links([
-            'prev_text' => '<',
-            'next_text' => '>',
-            'add_fragment' => '#news',
-        ]) !!}
-      </div>
+    </div>
+    <div class="container mt-12 text-right text-xl">
+      {!! paginate_links([
+          'prev_text' => '<',
+          'next_text' => '>',
+          'add_fragment' => '#news',
+      ]) !!}
+    </div>
   </div>
 @endsection

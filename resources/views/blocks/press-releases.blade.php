@@ -2,12 +2,12 @@
   id="press-releases">
 
   <form id="resources" class="border-b border-beige border-opacity-80" role="search" action="" method="get">
-    <div class="flex flex-wrap py-6 lg:flex-nowrap">
+    <div class="flex flex-wrap gap-4 py-6 lg:flex-nowrap">
       <input aria-label="Text to search for" type="text" name="search" placeholder="Search releases by title"
         value="{{ $_GET['search'] ?? '' }}"
-        class="w-full max-w-sm appearance-none rounded-full border-2 border-beige px-6 py-2 text-lg" />
+        class="max-w-sm flex-1 appearance-none rounded-full border-2 border-beige px-4 py-2 pr-8 text-lg lg:w-full lg:px-6" />
 
-      <div class="-ml-10 mr-8 rounded-full bg-white">
+      <div class="-ml-14 rounded-full bg-white lg:mr-8">
         <input
           class="inline-flex appearance-none rounded-full border-2 border-yellow bg-yellow bg-opacity-90 px-6 py-2 text-center text-lg transition hover:bg-opacity-100"
           type="submit" alt="Search" value="Search" />
@@ -36,14 +36,14 @@
       </x-alert>
     </div>
   @else
-    <div class="mb-16 mt-12 flex flex-col gap-8">
+    <div class="mb-16 mt-12 flex flex-col gap-4">
       @while ($press_releases->have_posts())
         @php($press_releases->the_post())
         <x-press_release-card :release="get_post()" />
       @endwhile
     </div>
   @endif
-  <div class="mb-16 text-right text-xl">
+  <div class="container mt-12 text-right text-xl">
     {!! paginate_links([
         'total' => $press_releases->max_num_pages,
         'prev_text' => '<',

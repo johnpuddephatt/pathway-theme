@@ -1,15 +1,16 @@
-<div class="relative mb-24">
+<div class="relative max-lg:bg-beige lg:mb-12 xl:mb-24">
 
   {!! wp_get_attachment_image($fields->image, '2by1', false, [
-      'class' => 'absolute top-0 right-0  block h-[85%]  w-[calc((0.85*1536px)+((100vw-1536px)/2))] object-cover',
+      'class' =>
+          'w-full max-lg:clip-hex-bottom lg:absolute max-lg:max-h-96 top-0 right-0  block lg:h-[85%]  lg:w-[calc((0.85*1536px)+((100vw-1536px)/2))] object-cover',
   ]) !!}
-  <div class="container relative flex h-[45vw] max-h-[50rem] w-full flex-row items-center">
+  <div class="container relative flex w-full flex-row items-center lg:h-[45vw] lg:max-h-[50rem]">
 
-    <div class="bg-beige absolute bottom-0 right-full top-0 h-full w-[9999px] bg-opacity-95"></div>
-    <div class="clip-hex-right bg-beige absolute left-0 top-0 h-full w-[45%] bg-opacity-95"></div>
-    <div class="relative w-[45%] py-12">
-      <h1 class="mb-8 max-w-sm font-serif text-5xl">{{ $fields->title }}</h1>
-      <div class="max-w-md text-lg font-semibold">
+    <div class="absolute bottom-0 right-full top-0 hidden h-full w-[9999px] bg-beige bg-opacity-95 lg:block"></div>
+    <div class="lg:clip-hex-right absolute left-0 top-0 h-full w-full bg-beige bg-opacity-95 lg:w-[45%]"></div>
+    <div class="relative pb-12 pt-4 lg:w-[45%] lg:py-12">
+      <h1 class="mb-4 mt-6 max-w-sm font-serif text-5xl lg:mb-8">{{ $fields->title }}</h1>
+      <div class="max-w-md text-lg">
         {{ $fields->description }}
       </div>
 

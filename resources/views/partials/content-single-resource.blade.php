@@ -25,13 +25,13 @@
 
         <h2 class="mb-8 mt-12 text-3xl font-bold">Downloads</h2>
 
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
 
           @foreach ($file_uploads as $file_upload)
             <a download href="{{ get_permalink($file_upload->ID) }}"
-              class="group flex max-w-4xl flex-row items-center rounded bg-white p-8">
+              class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
               <div>
-                <h3 class="text-xl font-semibold">{{ $file_upload->post_title }}</h3>
+                <h3 class="text-xl font-semibold leading-tight">{{ $file_upload->post_title }}</h3>
                 @php($file_type_array = explode('/', $file_upload->post_mime_type))
                 <div class="mt-2 flex flex-row gap-3">
                   <div class="uppercase">{{ end($file_type_array) }}</div>
@@ -59,12 +59,12 @@
 
         <h2 class="mb-8 mt-12 text-3xl font-bold">Links</h2>
 
-        <div class="flex max-w-4xl flex-col gap-6">
+        <div class="flex max-w-4xl flex-col gap-4">
           @foreach ($external_links as $external_link)
             <a target="_blank" href="{{ $external_link['link'] }}"
-              class="group flex max-w-4xl flex-row items-center rounded bg-white p-8">
+              class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
               <div>
-                <h3 class="text-xl font-semibold">{{ $external_link['label'] }}</h3>
+                <h3 class="text-xl font-semibold leading-tight">{{ $external_link['label'] }}</h3>
 
               </div>
               <div
@@ -89,7 +89,7 @@
   <div class="container my-16">
     <h2 class="mb-8 text-3xl font-semibold">Related resources</h2>
 
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-4">
       @foreach ($related_resources as $resource)
         <x-resource-card :resource="$resource" />
       @endforeach

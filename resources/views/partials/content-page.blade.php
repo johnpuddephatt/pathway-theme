@@ -1,8 +1,8 @@
 <article @php(post_class())>
   <div class="container mx-auto pb-32 xl:max-w-5xl">
     <div class="flex flex-col gap-8 lg:flex-row-reverse">
-      <div class="max-w-screen-sm lg:w-40">
-        <div class="sticky top-16 mx-auto">
+      <div class="max-w-screen-sm max-lg:-mx-4 max-lg:bg-beige max-lg:p-4 lg:w-40">
+        <div class="top-16 mx-auto lg:sticky">
           {!! $toc !!}
         </div>
       </div>

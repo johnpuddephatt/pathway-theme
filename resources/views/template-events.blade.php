@@ -4,7 +4,7 @@
 
 @extends('layouts.app') @section('content')
   @include('partials.section-header', ['background_colour' => 'bg-blue text-white'])
-  <div id="events" class="container mb-24 max-w-5xl space-y-8">
+  <div id="events" class="container mb-24 space-y-8 lg:max-w-5xl">
 
     <div class="page-content">
       {!! the_content() !!}

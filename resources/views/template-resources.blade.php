@@ -6,25 +6,25 @@
 
 @section('content')
   <div class="border-t border-blue border-opacity-25">
-    <div class="container relative mb-12 flex flex-row items-center gap-8 overflow-hidden pt-12">
+    <div class="container relative mb-12 flex flex-col overflow-hidden pt-8 md:flex-row md:items-center md:pt-12 lg:gap-8">
 
-      <div class="relative w-1/2 flex-none py-16">
+      <div class="relative flex-none pt-12 md:w-1/2 lg:py-16">
 
-        <h1 class="mb-8 max-w-md font-serif text-6xl">{!! the_title() !!}</h1>
-        <div class="max-w-md text-lg font-semibold">
+        <h1 class="mb-8 max-w-md font-serif text-4xl lg:text-6xl">{!! the_title() !!}</h1>
+        <div class="max-w-md text-lg font-semibold lg:text-xl">
           {!! the_excerpt() !!}
         </div>
 
       </div>
 
       {!! get_the_post_thumbnail(null, '3by2', [
-          'class' => 'clip-hex-top  flex-none block w-2/5 h-auto object-cover',
+          'class' => 'clip-hex-top ml-auto w-72  flex-none block md:w-2/5 h-auto object-cover',
       ]) !!}
     </div>
   </div>
 
   <div x-data="{ show_all: false }" class="bg-beige bg-opacity-20 py-12 text-center">
-    <div class="container grid grid-cols-3 gap-x-8 gap-y-4">
+    <div class="container grid gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
       @foreach ($key_issues as $issue)
         <a href="{{ get_permalink($issue->ID) }}" class="rounded bg-beige px-6 py-4 text-center">
           <h2 class="font-bold">{!! $issue->post_title !!}</h2>
@@ -35,7 +35,7 @@
     <button class="mt-6 rounded-full border-2 border-beige px-8 py-2" x-show="{{ count($issues) }} && !show_all"
       @click="show_all = true">Show all issues</button>
 
-    <div x-show="show_all" x-transition class="container mt-8 grid grid-cols-3 gap-x-8 gap-y-4">
+    <div x-show="show_all" x-transition class="container mt-8 grid gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
       @foreach ($issues as $issue)
         <a href="{{ get_permalink($issue->ID) }}" class="rounded bg-beige bg-opacity-50 px-6 py-4 text-center">
           <h2 class="font-bold">{!! $issue->post_title !!}</h2>
@@ -46,12 +46,12 @@
 
   <form id="resources" class="bg-beige bg-opacity-70" role="search"
     action="{{ get_permalink(get_option('page_for_resources')) }}" method="get">
-    <div class="container flex flex-wrap px-8 py-12 lg:flex-nowrap">
+    <div class="container flex flex-wrap gap-y-3 py-12 lg:flex-nowrap">
       <input aria-label="Text to search for" type="text" name="search" placeholder="Search resources by title"
         value="{{ $_GET['search'] ?? '' }}"
-        class="w-full max-w-xs appearance-none rounded-full border-2 border-beige px-6 py-2 text-lg" />
+        class="max-w-xs flex-1 appearance-none rounded-full border-2 border-beige px-6 py-2 text-lg lg:w-full" />
 
-      <div class="-ml-10 mr-8 rounded-full bg-white">
+      <div class="-ml-8 rounded-full bg-white lg:-ml-10 lg:mr-8">
         <input
           class="inline-flex appearance-none rounded-full border-2 border-yellow bg-yellow bg-opacity-90 px-6 py-2 text-center text-lg transition hover:bg-opacity-100"
           type="submit" alt="Search" value="Search" />
@@ -59,7 +59,8 @@
 
       <div class="relative ml-auto">
         <select onchange="this.form.submit()"
-          class="max-w-xs appearance-none rounded-full border border-beige px-6 py-2 pr-12 text-lg" name="type">
+          class="max-w-xs appearance-none rounded-full border border-beige px-4 py-2 pr-8 text-lg lg:px-6 lg:pr-12"
+          name="type">
           <option value="">All types</option>
 
           @foreach ($types as $key => $type)
@@ -77,7 +78,7 @@
       <div class="relative ml-4">
 
         <select onchange="this.form.submit()"
-          class="max-w-xs flex-shrink appearance-none rounded-full border border-beige px-6 py-2 pr-12 text-lg"
+          class="max-w-xs flex-shrink appearance-none rounded-full border border-beige px-4 py-2 pr-8 text-lg lg:px-6 lg:pr-12"
           name="key_issue">
           <option value="">All issues</option>
 
@@ -105,7 +106,7 @@
   @else
     <h2 class="container mt-16 text-2xl font-semibold">{{ $results_title }}</h2>
 
-    <div class="container mb-16 mt-12 flex flex-col gap-8">
+    <div class="container mb-16 mt-12 flex flex-col gap-4">
       @while ($resources->have_posts())
         @php($resources->the_post())
         <x-resource-card :resource="get_post()" />

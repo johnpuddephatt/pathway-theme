@@ -1,5 +1,10 @@
 @import '_fonts';
 @import '_block-styles';
+@import '_clips';
+
+.text-balance {
+  text-wrap: balance;
+}
 
 .page-numbers {
   @apply w-10 h-10 !no-underline text-xl  inline-flex transition items-center justify-center rounded-full bg-beige bg-opacity-30;
@@ -10,34 +15,6 @@
 
 .page-numbers.current {
   @apply !bg-opacity-100 font-bold;
-}
-
-.clip-hex-right {
-  clip-path: url(#clip-hex-right);
-}
-
-.clip-hex-top {
-  clip-path: url(#clip-hex-top);
-  aspect-ratio: 1.18;
-  object-fit: cover;
-}
-
-.clip-hex-left {
-  clip-path: url(#clip-hex-left);
-  aspect-ratio: 1.5;
-  object-fit: cover;
-}
-
-.clip-hex-bottom {
-  clip-path: url(#clip-hex-bottom);
-  aspect-ratio: 1.5;
-  object-fit: cover;
-}
-
-.clip-hex {
-  clip-path: url(#clip-hex);
-  aspect-ratio: 0.9;
-  object-fit: cover;
 }
 
 .page-sidebar-tree a:hover {

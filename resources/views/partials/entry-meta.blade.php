@@ -1,4 +1,4 @@
-<time class="text-2xl" datetime="{{ get_post_time('c', true) }}">
+<time class="text-lg lg:text-2xl" datetime="{{ get_post_time('c', true) }}">
   {{ get_the_date() }}
 </time>
 {{-- 

@@ -1,0 +1,30 @@
+@layer utilities {
+  .clip-hex-right {
+    clip-path: url(#clip-hex-right);
+    aspect-ratio: 1.5;
+  }
+
+  .clip-hex-top {
+    clip-path: url(#clip-hex-top);
+    aspect-ratio: 1.18;
+    object-fit: cover;
+  }
+
+  .clip-hex-left {
+    clip-path: url(#clip-hex-left);
+    aspect-ratio: 1.5;
+    object-fit: cover;
+  }
+
+  .clip-hex-bottom {
+    clip-path: url(#clip-hex-bottom);
+    aspect-ratio: 1.5;
+    object-fit: cover;
+  }
+
+  .clip-hex {
+    clip-path: url(#clip-hex);
+    aspect-ratio: 0.9;
+    object-fit: cover;
+  }
+}
