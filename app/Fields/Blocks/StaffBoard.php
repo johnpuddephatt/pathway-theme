@@ -25,6 +25,7 @@ Block::make(__('Staff and board'))
             
         
         echo view('blocks.staff-grid', [
+            'fields' => (object) $fields,
            'staff' => get_posts([
                'post_type' => 'person',
                'tax_query' => [
