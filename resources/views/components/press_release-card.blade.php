@@ -3,7 +3,7 @@
   <div class="flex flex-row items-center">
     <div class="p-4">
 
-      <h3 class="!my-0 mb-1 !text-lg font-bold !leading-tight md:!text-2xl">{{ $release->post_title }}
+      <h3 class="!my-0 mb-1 !text-lg font-bold !leading-tight md:!text-xl">{{ $release->post_title }}
       </h3>
 
       <div class="text-blue">
