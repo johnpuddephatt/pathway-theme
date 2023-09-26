@@ -12,7 +12,7 @@
 
     <div class="relative">
       <h2 class="mb-6 max-w-lg font-serif text-4xl !leading-none md:text-5xl lg:mb-8">{{ $fields->title }}</h2>
-      <div class="max-w-md text-lg font-semibold">
+      <div class="max-w-md text-lg">
         {{ $fields->description }}
       </div>
       <x-buttons :buttons="$fields->buttons" :invert="$fields->background_colour == 'bg-yellow' || $fields->background_colour == 'bg-pink'" />
