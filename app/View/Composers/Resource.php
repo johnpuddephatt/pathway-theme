@@ -19,7 +19,7 @@ class Resource extends Composer
         global $post;
 
         return [
-            "file_uploads" => carbon_get_post_meta($post->ID, 'files') ? get_posts(['post_type' => 'attachment', 'post__in' =>  carbon_get_post_meta($post->ID, 'files')]) : null,
+            "file_uploads" => carbon_get_post_meta($post->ID, 'files') ? get_posts(['post_type' => 'attachment', 'post__in' =>  carbon_get_post_meta($post->ID, 'files')]) : [],
             "file_oembed" => carbon_get_post_meta($post->ID,'file_oembed') ? (new \WP_oEmbed())->get_data(carbon_get_post_meta($post->ID,'file_oembed')) : null,
             "external_links" => carbon_get_post_meta($post->ID, 'links'),
             "types" => get_the_terms($post->ID, 'resource_type'),
