@@ -35,7 +35,7 @@
 
 .post-content,
 .page-content {
-  @apply prose xl:prose-lg max-w-none;
+  @apply prose xl:prose-lg max-w-none break-words;
 }
 
 .post-content > *:first-child,

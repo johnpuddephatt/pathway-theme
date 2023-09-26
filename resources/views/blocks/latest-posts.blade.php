@@ -8,7 +8,7 @@
 
           <p class="text-semibold mb-2">{{ get_the_date(null, $post->ID) }}</p>
 
-          <h3 class="mb-6 max-w-xl text-2xl font-bold leading-tight">{{ $post->post_title }}?</h3>
+          <h3 class="mb-6 max-w-xl text-xl font-bold leading-tight lg:text-2xl">{{ $post->post_title }}?</h3>
           <div class="mb-8 max-w-sm lg:max-w-xs">
             {!! wp_trim_words(get_the_excerpt($post->ID), 15) !!}
           </div>

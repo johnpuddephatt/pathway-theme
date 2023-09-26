@@ -6,7 +6,7 @@
       <h3 class="!my-0 mb-1 !text-lg font-bold !leading-tight md:!text-2xl">{{ $release->post_title }}
       </h3>
 
-      <div class="font-semibold text-blue">
+      <div class="text-blue">
         {{ get_the_date(null, $release->ID) }}
       </div>
 

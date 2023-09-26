@@ -214,23 +214,23 @@ return [
             ],
         ],
         
-        'team' => [
-            'enter_title_here' => 'Enter team name',
-            'menu_icon' => 'dashicons-groups',
-            'supports' => [
-                'title',
-                'editor',
-                'author',
-                'revisions',
-                'thumbnail',
-            ],
-            'show_in_rest' => true,
-            'has_archive' => false,
-            'labels' => [
-                'singular' => 'Team',
-                'plural' => 'Pathway Teams',
-            ],
-        ],
+        // 'team' => [
+        //     'enter_title_here' => 'Enter team name',
+        //     'menu_icon' => 'dashicons-groups',
+        //     'supports' => [
+        //         'title',
+        //         'editor',
+        //         'author',
+        //         'revisions',
+        //         'thumbnail',
+        //     ],
+        //     'show_in_rest' => true,
+        //     'has_archive' => false,
+        //     'labels' => [
+        //         'singular' => 'Team',
+        //         'plural' => 'Pathway Teams',
+        //     ],
+        // ],
     ],
 
     /*

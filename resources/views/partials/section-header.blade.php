@@ -12,7 +12,7 @@
       class="{{ isset($background_colour) ? str_replace('bg-', 'from-', $background_colour) : 'from-green' }} pointer-events-none absolute right-0 top-0 h-full w-[60%] origin-center bg-gradient-to-r from-15% to-transparent md:left-0 md:right-auto md:w-1/3">
     </div>
     <h1 class="relative mb-2 max-w-md font-serif text-4xl md:mb-4 lg:mb-8 lg:text-6xl">{!! $title ?? get_the_title() !!}</h1>
-    <div class="relative max-w-md text-lg font-semibold lg:text-xl">
+    <div class="relative max-w-md font-semibold !leading-tight md:text-lg lg:text-xl">
       {!! $excerpt ?? get_the_excerpt() !!}
     </div>
   </div>

@@ -27,7 +27,7 @@
             href="{{ get_permalink(get_option('page_for_people')) }}">{!! get_the_title(get_option('page_for_people')) !!}
             &gt;</a>
         @endif
-        <h1 class="mb-8 max-w-sm font-serif text-5xl lg:text-6xl">{!! $title ?? get_the_title() !!}</h1>
+        <h1 class="mb-8 max-w-sm font-serif text-4xl md:text-5xl lg:text-6xl">{!! $title ?? get_the_title() !!}</h1>
 
         <div class="flex-row gap-3 text-lg !leading-none lg:text-2xl xl:flex">
           <div>{{ carbon_get_post_meta(get_the_ID(), 'role_title') }}</div>

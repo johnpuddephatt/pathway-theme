@@ -1,4 +1,4 @@
-<header>
+<header class="sticky top-0 z-10 bg-white bg-opacity-95 lg:static">
   @if ($secondaryNavigation)
     <div class="hidden border-b border-blue border-opacity-25 pb-3 pt-4 lg:block">
       <div class="container max-w-none">
@@ -15,7 +15,7 @@
       </div>
     </div>
   @endif
-  <div class="">
+  <div>
     <div class="container flex max-w-none items-center justify-center lg:justify-between">
       <a class="font-heading flex flex-row items-center gap-1.5 py-3 text-2xl font-bold tracking-tight lg:py-6 lg:text-3xl"
         href="{{ home_url('/') }}">
@@ -46,7 +46,7 @@
       @if ($primaryNavigation)
 
         <nav x-cloak :class="{ 'max-lg:translate-x-full': !menuOpen }"
-          class="flex flex-col justify-center overflow-y-auto transition max-lg:fixed max-lg:inset-0 max-lg:top-16 max-lg:z-20 max-lg:h-full max-lg:w-full max-lg:bg-green max-lg:py-36 max-lg:text-white">
+          class="flex flex-col justify-center overflow-y-auto transition max-lg:fixed max-lg:inset-0 max-lg:top-16 max-lg:z-20 max-lg:h-full max-lg:w-full max-lg:bg-blue max-lg:py-36 max-lg:text-white">
 
           <ul class="flex flex-col gap-4 max-lg:container lg:flex-row lg:gap-12">
             @foreach ($primaryNavigation as $item)
@@ -58,7 +58,7 @@
           </ul>
 
           @if ($secondaryNavigation)
-            <nav class="container mt-12 lg:hidden">
+            <nav class="container mt-6 border-t border-white border-opacity-30 pt-6 lg:hidden">
               <ul class="flex flex-col gap-2 text-lg font-semibold text-white">
                 @foreach ($secondaryNavigation as $item)
                   <li>
