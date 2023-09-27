@@ -1,5 +1,5 @@
 <div>
-  <div class="container mt-8 md:mt-12 xl:max-w-5xl">
+  <div class="container mt-8 md:mt-12 xl:max-w-5xl 2xl:max-w-6xl">
     <div class="relative">
 
       @if (isset($post) && isset($post->post_type) && $post->post_type == 'post')
