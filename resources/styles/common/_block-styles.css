@@ -69,3 +69,7 @@ h3.wp-block-heading {
 .wp-block-group.has-background {
   @apply p-6;
 }
+
+.wp-block-group.has-background > *:first-child {
+  @apply mt-0;
+}
