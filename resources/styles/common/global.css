@@ -25,8 +25,16 @@
   @apply container block py-4 text-xl font-semibold text-blue bg-white bg-opacity-0 hover:bg-opacity-50 transition;
 }
 
+.page-sidebar-tree .children {
+  @apply hidden;
+}
+
+.page-sidebar-tree .current_page_item > .children {
+  @apply block;
+}
+
 .page-sidebar-tree .children li a {
-  @apply text-base indent-4;
+  @apply text-base pl-4;
 }
 
 .page-sidebar-tree .current_page_item > a {
