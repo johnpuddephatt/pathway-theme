@@ -65,3 +65,7 @@ h3.wp-block-heading {
 .wp-block-quote.is-style-large cite {
   @apply text-xl;
 }
+
+.wp-block-group.has-background {
+  @apply p-6;
+}
