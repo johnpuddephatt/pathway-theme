@@ -34,7 +34,7 @@
 }
 
 .page-sidebar-tree .children li a {
-  @apply text-base pl-4;
+  @apply text-base ml-2.5;
 }
 
 .page-sidebar-tree .current_page_item > a {
