@@ -55,7 +55,7 @@ const config = {
           css: {
             '--tw-prose-body': theme('colors.blue'),
             '--tw-prose-headings': theme('colors.blue'),
-            '--tw-prose-strong': theme('colors.blue'),
+            '--tw-prose-bold': theme('colors.blue'),
           },
         },
       }),
