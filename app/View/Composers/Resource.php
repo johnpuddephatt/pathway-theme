@@ -15,15 +15,22 @@ class Resource extends Composer
         'partials.content-single-resource',
     ];
 
+    private function get_files($files) {
+        $ids = array_column($files, 'file');
+        array_walk($files, function(&$item, $key) use ($ids) {
+            $item['file'] = get_post(intval($ids[$key]));
+        });
+        return $files;
+    }
+
     public function with() {    
         global $post;
-
+  
         return [
-            "file_uploads" => carbon_get_post_meta($post->ID, 'files') ? get_posts(['post_type' => 'attachment', 'post__in' =>  carbon_get_post_meta($post->ID, 'files')]) : [],
-            "file_oembed" => carbon_get_post_meta($post->ID,'file_oembed') ? (new \WP_oEmbed())->get_data(carbon_get_post_meta($post->ID,'file_oembed')) : null,
-            "external_links" => carbon_get_post_meta($post->ID, 'links'),
+            "file_uploads" => carbon_get_post_meta($post->ID, 'files') ? $this->get_files(carbon_get_post_meta($post->ID, 'files')) : [],
+            "file_oembed" => carbon_get_post_meta($post->ID,'file_oembed') ? (new \WP_oEmbed())->get_data(carbon_get_post_meta($post->ID,'file_oembed')) : [],
+            "external_links" => carbon_get_post_meta($post->ID, 'links') ?: [] ,
             "types" => get_the_terms($post->ID, 'resource_type'),
-            // "issue_ids" => carbon_get_post_meta( $post->ID, 'issues' ),
             "issues" => get_posts([
                 'post_type' => 'issue',
                 'posts_per_page' => -1,

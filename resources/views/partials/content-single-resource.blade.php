@@ -28,32 +28,34 @@
         <div class="flex flex-col gap-4">
 
           @foreach ($file_uploads as $file_upload)
-            <a download href="{{ get_permalink($file_upload->ID) }}"
-              class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
-              <div>
-                <h3 class="text-xl font-semibold leading-tight">{{ $file_upload->post_title }}</h3>
+            @if (isset($file_upload['title']) && isset($file_upload['file']))
+              <a download href="{{ get_permalink($file_upload['file']->ID) }}"
+                class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
+                <div>
+                  <h3 class="text-xl font-semibold leading-tight">{{ $file_upload['title'] }}</h3>
 
-                @php($file_type_array = explode('.', $file_upload->guid))
-                <div class="mt-2 flex flex-row gap-1.5">
-                  @if (count($file_type_array))
-                    <div class="rounded bg-beige bg-opacity-50 px-1 uppercase">.{{ end($file_type_array) }}</div>
-                  @endif
+                  @php($file_type_array = explode('.', $file_upload['file']->guid))
+                  <div class="mt-2 flex flex-row gap-1.5">
+                    @if (count($file_type_array))
+                      <div class="rounded bg-beige bg-opacity-50 px-1 uppercase">.{{ end($file_type_array) }}</div>
+                    @endif
 
-                  {{ number_format(filesize(get_attached_file($file_upload->ID)) / 1000000, 1) }}MB
+                    {{ number_format(filesize(get_attached_file($file_upload['file']->ID)) / 1000000, 1) }}MB
+
+                  </div>
+                </div>
+
+                <div
+                  class="ml-auto flex-none rounded-full bg-green bg-opacity-70 p-3.5 transition group-hover:bg-opacity-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
+                    class="ml-auto h-8 w-8 text-white" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44z" />
+                  </svg>
 
                 </div>
-              </div>
-
-              <div
-                class="ml-auto flex-none rounded-full bg-green bg-opacity-70 p-3.5 transition group-hover:bg-opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
-                  class="ml-auto h-8 w-8 text-white" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44z" />
-                </svg>
-
-              </div>
-            </a>
+              </a>
+            @endif
           @endforeach
         </div>
       @endif

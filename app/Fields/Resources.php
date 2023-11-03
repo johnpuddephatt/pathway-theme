@@ -50,7 +50,11 @@ Container::make('post_meta', 'Files')
     ->where('post_type', '=', 'resource')
     ->set_context('side')
     ->add_fields([
-        Field::make('media_gallery', 'files', 'Files')->set_type(['pdf']),
+        Field::make('complex', 'files', 'Files')
+        ->add_fields([
+            Field::make('text', 'title', 'Title'),
+            Field::make('file', 'file', 'File'),
+        ])
     ]);
 
 Container::make('post_meta', 'Key issues')
