@@ -35,6 +35,7 @@
                   <div class="flex flex-row items-end gap-2">
                     <h3 class="text-xl font-semibold leading-tight">{{ $file_upload['file']->post_title }}</h3>
                     <div class="mt-2 flex flex-row gap-1.5">
+                      @php($file_type_array = explode('.', $file_upload['file']->guid))
                       @if (count($file_type_array))
                         <div class="rounded bg-beige bg-opacity-50 px-1 uppercase">.{{ end($file_type_array) }}</div>
                       @endif
@@ -44,7 +45,7 @@
                     </div>
                   </div>
 
-                  <p class="my-1.5 max-w-xl">{{ $file_upload['file']->post_excerpt }}</p> @php($file_type_array = explode('.', $file_upload['file']->guid))
+                  <p class="my-1.5 max-w-xl">{{ $file_upload['file']->post_excerpt }}</p>
 
                 </div>
 
