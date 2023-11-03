@@ -47,7 +47,7 @@ class ResourceArchive extends Composer
                     'post_type' => 'resource',
                     'paged' => (int) $currentPage,
                     "s" => $_GET['search'] ?? null,
-                    'order' => isset($_GET['order']) ? $_GET['order'] : 'ASC',
+                    'order' => isset($_GET['order']) ? $_GET['order'] : 'DESC',
                     'meta_query' => $meta_query,
                     'tax_query' => $tax_query
                 ]),
