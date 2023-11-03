@@ -32,15 +32,14 @@
               <a download href="{{ get_permalink($file_upload['file']->ID) }}"
                 class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
                 <div>
-                  <h3 class="text-xl font-semibold leading-tight">{{ $file_upload['title'] }}</h3>
-
-                  @php($file_type_array = explode('.', $file_upload['file']->guid))
+                  <h3 class="text-xl font-semibold leading-tight">{{ $file_upload['file']->post_title }}</h3>
+                  <p class="my-1.5 max-w-lg">{{ $file_upload['file']->post_excerpt }}</p> @php($file_type_array = explode('.', $file_upload['file']->guid))
                   <div class="mt-2 flex flex-row gap-1.5">
                     @if (count($file_type_array))
                       <div class="rounded bg-beige bg-opacity-50 px-1 uppercase">.{{ end($file_type_array) }}</div>
                     @endif
 
-                    {{ number_format(filesize(get_attached_file($file_upload['file']->ID)) / 1000000, 1) }}MB
+                    {{ max(number_format(filesize(get_attached_file($file_upload['file']->ID)) / 1000000, 1), 0.1) }}MB
 
                   </div>
                 </div>
