@@ -33,7 +33,7 @@
               <div>
                 <h3 class="text-xl font-semibold leading-tight">{{ $file_upload->post_title }}</h3>
 
-                @php($file_type_array = explode('.', $file_upload->guid));
+                @php($file_type_array = explode('.', $file_upload->guid))
                 <div class="mt-2 flex flex-row gap-3">
                   <div class="uppercase">{{ end($file_type_array) }}</div>
 
