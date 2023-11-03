@@ -25,4 +25,3 @@
     @endif
   </div>
 </div>
-</div>
