@@ -90,7 +90,7 @@
   </div>
 @endif
 
-@if (count($related_resources))
+@if ($related_resources && count($related_resources))
   <div class="container my-16">
     <h2 class="mb-8 text-3xl font-semibold">Related resources</h2>
 
