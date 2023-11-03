@@ -15,6 +15,11 @@ add_action('admin_footer-post.php', function () {
 
     echo <<<'HTML'
 <style>
+
+    [data-setting="description"] {
+        display: none !important;
+    }
+    
 .cf-textarea__input {
     padding: 8px !important;
 }
