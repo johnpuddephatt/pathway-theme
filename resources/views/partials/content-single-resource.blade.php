@@ -35,7 +35,7 @@
                   <div class="flex flex-row items-end gap-2">
                     <h3 class="text-xl font-semibold leading-tight">{{ $file_upload['file']->post_title }}</h3>
                     <div
-                      class="mt-2 flex flex-row items-center gap-1.5 rounded bg-beige bg-opacity-20 px-1 text-sm uppercase">
+                      class="mt-2 flex flex-row items-center gap-1 rounded bg-beige bg-opacity-20 px-1 text-sm uppercase">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="h-4 w-4">
                         <path stroke-linecap="round" stroke-linejoin="round"
