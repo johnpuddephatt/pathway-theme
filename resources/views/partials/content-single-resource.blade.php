@@ -35,7 +35,9 @@
 
                 @php($file_type_array = explode('.', $file_upload->guid))
                 <div class="mt-2 flex flex-row gap-3">
-                  <div class="uppercase">{{ end($file_type_array) }}</div>
+                  @if (count($file_type_array))
+                    <div class="uppercase">.{{ end($file_type_array) }}</div>
+                  @endif
 
                   {{ number_format(filesize(get_attached_file($file_upload->ID)) / 1000000, 1) }}MB
 
