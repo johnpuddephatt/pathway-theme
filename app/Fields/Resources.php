@@ -52,7 +52,7 @@ Container::make('post_meta', 'Files')
     ->add_fields([
         Field::make('complex', 'files', 'Files')
         ->add_fields([
-            Field::make('text', 'title', 'Title'),
+            
             Field::make('file', 'file', 'File'),
         ])
     ]);
