@@ -34,7 +34,7 @@ class Resource extends Composer
             "issues" => get_posts([
                 'post_type' => 'issue',
                 'posts_per_page' => -1,
-                'post__in' => $this->issue_ids(),
+                'post__in' => $this->issue_ids() ?? [],
             ]),
             "related_resources" => $this->get_related_resources(),
         ];
