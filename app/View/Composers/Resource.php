@@ -31,11 +31,11 @@ class Resource extends Composer
             "file_oembed" => carbon_get_post_meta($post->ID,'file_oembed') ? (new \WP_oEmbed())->get_data(carbon_get_post_meta($post->ID,'file_oembed')) : [],
             "external_links" => carbon_get_post_meta($post->ID, 'links') ?: [] ,
             "types" => get_the_terms($post->ID, 'resource_type'),
-            "issues" => get_posts([
+            "issues" => $this->issue_ids() ? get_posts([
                 'post_type' => 'issue',
                 'posts_per_page' => -1,
-                'post__in' => $this->issue_ids() ?? [],
-            ]),
+                'post__in' => $this->issue_ids(),
+            ]) : [],
             "related_resources" => $this->get_related_resources(),
         ];
     }
