@@ -34,7 +34,7 @@
                 <h3 class="text-xl font-semibold leading-tight">{{ $file_upload->post_title }}</h3>
 
                 @php($file_type_array = explode('.', $file_upload->guid))
-                <div class="mt-2 flex flex-row gap-3">
+                <div class="mt-2 flex flex-row gap-1.5">
                   @if (count($file_type_array))
                     <div class="rounded bg-beige bg-opacity-50 px-1 uppercase">.{{ end($file_type_array) }}</div>
                   @endif
