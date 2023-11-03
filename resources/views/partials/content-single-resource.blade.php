@@ -29,7 +29,7 @@
 
           @foreach ($file_uploads as $file_upload)
             @if (isset($file_upload['file']))
-              <a download href="{{ get_permalink($file_upload['file']->ID) }}"
+              <a download href="{{ wp_get_attachment_url($file_upload['file']->ID) }}"
                 class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
                 <div>
                   <div class="flex flex-row items-end gap-2">
