@@ -50,7 +50,7 @@
                     </div>
                   </div>
 
-                  <p class="my-1.5 max-w-xl">{{ $file_upload['file']->post_excerpt }}</p>
+                  <p class="mt-2 max-w-xl">{{ $file_upload['file']->post_excerpt }}</p>
 
                 </div>
 
