@@ -192,6 +192,8 @@ return [
                             return $carry;
                         }, []);
 
+                        if(!$ids) return false;
+
                         $issues = get_posts([
                             'post_type' => 'issue',
                             'posts_per_page' => -1,
