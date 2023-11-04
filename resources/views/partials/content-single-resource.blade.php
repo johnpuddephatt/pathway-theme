@@ -15,17 +15,19 @@
 
         <h2 class="mb-8 mt-12 text-3xl font-bold">Media</h2>
 
-        @foreach ($file_oembeds as $file_oembed)
-          @if ($file_oembed && isset($file_oembed['file_oembed']))
-            <div class="max-w-4xl">
-              <div
-                style="padding-top: {{ ($file_oembed['file_oembed']->height / $file_oembed['file_oembed']->width) * 100 }}%;"
-                class="embedded-iframe relative">
-                {!! $file_oembed['file_oembed']->html !!}
+        <div class="flex flex-col gap-4">
+          @foreach ($file_oembeds as $file_oembed)
+            @if ($file_oembed && isset($file_oembed['file_oembed']))
+              <div class="max-w-3xl">
+                <div
+                  style="padding-top: {{ ($file_oembed['file_oembed']->height / $file_oembed['file_oembed']->width) * 100 }}%;"
+                  class="embedded-iframe relative">
+                  {!! $file_oembed['file_oembed']->html !!}
+                </div>
               </div>
-            </div>
-          @endif
-        @endforeach
+            @endif
+          @endforeach
+        </div>
       @endif
 
       @if (count($file_uploads))
