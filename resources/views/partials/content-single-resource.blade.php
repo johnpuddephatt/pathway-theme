@@ -75,7 +75,7 @@
 
         <div class="flex max-w-4xl flex-col gap-4">
           @foreach ($external_links as $external_link)
-            @if (isset($file_upload['link']) && isset($file_upload['label']))
+            @if (isset($external_link['link']) && isset($external_link['label']))
               <a target="_blank" href="{{ $external_link['link'] }}"
                 class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
                 <div>
