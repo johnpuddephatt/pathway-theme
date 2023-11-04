@@ -13,19 +13,19 @@
 
       @if (count($file_oembeds))
 
-        <h2 class="mb-8 mt-12 text-3xl font-bold">Media</h2>
+        <h2 class="mb-8 mt-12 text-3xl font-bold">Videos &amp; media</h2>
 
         <div class="flex flex-col gap-8">
           @foreach ($file_oembeds as $file_oembed)
             @if ($file_oembed && isset($file_oembed['file_oembed']))
-              <div class="max-w-3xl">
+              <div class="max-w-3xl overflow-hidden rounded-lg">
                 <div
                   style="padding-top: {{ ($file_oembed['file_oembed']->height / $file_oembed['file_oembed']->width) * 100 }}%;"
-                  class="embedded-iframe relative overflow-hidden rounded-lg">
+                  class="embedded-iframe relative">
                   {!! $file_oembed['file_oembed']->html !!}
                 </div>
                 @if (isset($file_oembed['label']))
-                  <p class="mt-2 text-xl font-bold">{{ $file_oembed['label'] }}</p>
+                  <p class="bg-white p-2 text-xl font-bold">{{ $file_oembed['label'] }}</p>
                 @endif
               </div>
             @endif
