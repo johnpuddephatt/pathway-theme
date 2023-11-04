@@ -23,12 +23,20 @@ class Resource extends Composer
         return $files;
     }
 
+    private function get_embeds($embeds) {
+        $ids = array_column($embeds, 'file_oembed');
+        array_walk($embeds, function(&$item, $key) use ($ids) {
+            $item['file_oembed'] =  (new \WP_oEmbed())->get_data(intval($ids[$key]));
+        });
+        return $embeds;
+    }
+
     public function with() {    
         global $post;
   
         return [
             "file_uploads" => carbon_get_post_meta($post->ID, 'files') ? $this->get_files(carbon_get_post_meta($post->ID, 'files')) : [],
-            "file_oembed" => carbon_get_post_meta($post->ID,'file_oembed') ? (new \WP_oEmbed())->get_data(carbon_get_post_meta($post->ID,'file_oembed')) : [],
+            "file_oembeds" => carbon_get_post_meta($post->ID,'file_oembed') ? $this->get_embeds(carbon_get_post_meta($post->ID,'embeds')) : [],
             "external_links" => carbon_get_post_meta($post->ID, 'links') ?: [] ,
             "types" => get_the_terms($post->ID, 'resource_type'),
             "issues" => $this->issue_ids() ? get_posts([

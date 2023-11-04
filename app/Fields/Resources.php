@@ -38,14 +38,17 @@ Container::make('post_meta', 'External links')
             Field::make('text', 'label', 'Label'),
             Field::make('text', 'organisation', 'Organisation/website name'),
         ])
-        
-        
     ]);
 
 Container::make('post_meta', 'Embed')
     ->where('post_type', '=', 'resource')
     ->set_context('side')
-    ->add_fields([Field::make('oembed', 'file_oembed', 'oEmbed URL')]);
+    ->add_fields([Field::make('complex', 'embeds', 'Embeds')
+        ->add_fields([
+            Field::make('oembed', 'file_oembed', 'oEmbed URL'),
+            Field::make('text', 'label', 'Label'),
+        ]),
+    ]);      
 
 Container::make('post_meta', 'Files')
     ->where('post_type', '=', 'resource')
