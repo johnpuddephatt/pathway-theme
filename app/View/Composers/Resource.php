@@ -36,7 +36,7 @@ class Resource extends Composer
   
         return [
             "file_uploads" => carbon_get_post_meta($post->ID, 'files') ? $this->get_files(carbon_get_post_meta($post->ID, 'files')) : [],
-            "file_oembeds" => carbon_get_post_meta($post->ID,'file_oembed') ? $this->get_embeds(carbon_get_post_meta($post->ID,'embeds')) : [],
+            "file_oembeds" => carbon_get_post_meta($post->ID,'embeds') ? $this->get_embeds(carbon_get_post_meta($post->ID,'embeds')) : [],
             "external_links" => carbon_get_post_meta($post->ID, 'links') ?: [] ,
             "types" => get_the_terms($post->ID, 'resource_type'),
             "issues" => $this->issue_ids() ? get_posts([
