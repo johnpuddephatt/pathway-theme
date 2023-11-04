@@ -15,13 +15,13 @@
 
         <h2 class="mb-8 mt-12 text-3xl font-bold">Media</h2>
 
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-8">
           @foreach ($file_oembeds as $file_oembed)
             @if ($file_oembed && isset($file_oembed['file_oembed']))
               <div class="max-w-3xl">
                 <div
                   style="padding-top: {{ ($file_oembed['file_oembed']->height / $file_oembed['file_oembed']->width) * 100 }}%;"
-                  class="embedded-iframe relative">
+                  class="embedded-iframe relative overflow-hidden rounded-lg">
                   {!! $file_oembed['file_oembed']->html !!}
                 </div>
                 @if (isset($file_oembed['label']))
