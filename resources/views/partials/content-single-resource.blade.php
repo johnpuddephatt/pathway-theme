@@ -75,24 +75,28 @@
 
         <div class="flex max-w-4xl flex-col gap-4">
           @foreach ($external_links as $external_link)
-            <a target="_blank" href="{{ $external_link['link'] }}"
-              class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
-              <div>
-                <h3 class="text-xl font-semibold leading-tight">{{ $external_link['label'] }}</h3>
-                <p class="mt-2 max-w-xl">{{ $file_upload['organisation'] }}</p>
+            @if (isset($file_upload['link']) && isset($file_upload['label']))
+              <a target="_blank" href="{{ $external_link['link'] }}"
+                class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
+                <div>
+                  <h3 class="text-xl font-semibold leading-tight">{{ $external_link['label'] }}</h3>
+                  @if (isset($external_link['organisation']))
+                    <p class="mt-2 max-w-xl">{{ $external_link['organisation'] }}</p>
+                  @endif
 
-              </div>
-              <div
-                class="ml-auto flex-none rounded-full bg-green bg-opacity-70 p-3.5 transition group-hover:bg-opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
-                  class="ml-auto h-8 w-8 text-white" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                </svg>
+                </div>
+                <div
+                  class="ml-auto flex-none rounded-full bg-green bg-opacity-70 p-3.5 transition group-hover:bg-opacity-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
+                    class="ml-auto h-8 w-8 text-white" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
 
-              </div>
+                </div>
 
-            </a>
+              </a>
+            @endif
           @endforeach
         </div>
       @endif

@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      {!! get_the_post_thumbnail(null, '3by2', [
+      {!! get_the_post_thumbnail(null, '3by2', [,.
           'class' => 'clip-hex-top mx-auto w-72  flex-none block md:w-2/5 h-auto object-cover',
       ]) !!}
     </div>
