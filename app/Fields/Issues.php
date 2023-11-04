@@ -3,10 +3,10 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-Container::make('post_meta', 'URL')
-    ->where('post_type', '=', 'resource')
-    ->set_context('side')
-    ->add_fields([Field::make('text', 'crb_url', 'External URL')]);
+// Container::make('post_meta', 'URL')
+//     ->where('post_type', '=', 'resource')
+//     ->set_context('side')
+//     ->add_fields([Field::make('text', 'crb_url', 'External URL')]);
 
 Container::make('post_meta', 'Type')
     ->where('post_type', '=', 'issue')

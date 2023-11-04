@@ -79,6 +79,7 @@
               class="group flex max-w-4xl flex-row items-center gap-2 rounded bg-white p-4 lg:p-8">
               <div>
                 <h3 class="text-xl font-semibold leading-tight">{{ $external_link['label'] }}</h3>
+                <p class="mt-2 max-w-xl">{{ $file_upload['organisation'] }}</p>
 
               </div>
               <div

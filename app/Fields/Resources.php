@@ -36,6 +36,7 @@ Container::make('post_meta', 'External links')
         ->add_fields([
             Field::make('text', 'link', 'Link URL'),
             Field::make('text', 'label', 'Label'),
+            Field::make('text', 'organisation', 'Organisation/website name'),
         ])
         
         
