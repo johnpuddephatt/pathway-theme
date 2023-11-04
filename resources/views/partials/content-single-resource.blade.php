@@ -24,8 +24,8 @@
                   class="embedded-iframe relative">
                   {!! $file_oembed['file_oembed']->html !!}
                 </div>
-                @if (isset($file_oembed['title']))
-                  <p class="mt-2 text-xl font-bold">{{ $file_oembed['title'] }}</p>
+                @if (isset($file_oembed['label']))
+                  <p class="mt-2 text-xl font-bold">{{ $file_oembed['label'] }}</p>
                 @endif
               </div>
             @endif
