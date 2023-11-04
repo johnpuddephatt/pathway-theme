@@ -26,7 +26,7 @@ class Resource extends Composer
     private function get_embeds($embeds) {
         $ids = array_column($embeds, 'file_oembed');
         array_walk($embeds, function(&$item, $key) use ($ids) {
-            $item['file_oembed'] =  (new \WP_oEmbed())->get_data(intval($ids[$key]));
+            $item['file_oembed'] =  (new \WP_oEmbed())->get_data($ids[$key]);
         });
         return $embeds;
     }
