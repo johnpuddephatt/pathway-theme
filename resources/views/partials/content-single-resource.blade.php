@@ -7,7 +7,7 @@
 </div>
 
 @if (count($file_uploads) || count($external_links) || count($file_oembeds))
-  <div class="bg-beige bg-opacity-50 pb-16 pt-4">
+  <div class="bg-beige bg-opacity-50 pb-16 pt-4 lg:pb-32">
 
     <div class="container">
 
