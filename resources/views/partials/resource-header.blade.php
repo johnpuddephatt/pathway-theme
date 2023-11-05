@@ -4,7 +4,8 @@
     <a class="mb-6 inline-block lg:text-lg"
       href="{{ get_permalink(get_option('page_for_resources')) }}">{!! get_the_title(get_option('page_for_resources')) !!}
       &gt;</a>
-    <h1 class="mb-8 max-w-5xl text-5xl font-bold">{!! $title !!} </h1>
+    <h1 class="mb-8 max-w-4xl text-5xl font-bold">{!! $title !!} </h1>
+    <p>{{ get_the_date('m Y') }}</p>
 
     @if ($types)
       <div class="flex flex-row gap-2">
