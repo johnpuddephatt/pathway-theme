@@ -1,11 +1,11 @@
-<div class="border-t border-blue border-opacity-30 pt-36">
+<div class="border-t border-blue border-opacity-30 pt-32 2xl:pt-36">
 
   <div class="container">
     <a class="mb-12 inline-block lg:text-lg"
       href="{{ get_permalink(get_option('page_for_resources')) }}">{!! get_the_title(get_option('page_for_resources')) !!}
       &gt;</a>
     <h1 class="max-w-4xl font-serif text-6xl">{!! $title !!} </h1>
-    <p class="mb-12 mt-6 text-2xl">{{ get_the_date('F Y') }}</p>
+    <p class="mb-16 mt-6 text-2xl">{{ get_the_date('F Y') }}</p>
 
     @if ($types)
       <div class="flex flex-row gap-2">
