@@ -3,7 +3,7 @@
     <div class="flex flex-row items-center border-l-8 border-yellow lg:gap-12 lg:border-l-[2rem]">
       <div class="px-3 lg:px-6">
 
-        <h3 class="mb-1 text-xl font-bold !leading-none lg:mb-3 lg:text-2xl">{{ $resource->post_title }}
+        <h3 class="mb-1 text-xl font-semibold !leading-tight lg:mb-2">{{ $resource->post_title }}
         </h3>
 
         <div class="flex flex-col items-start gap-0.5 font-semibold lg:flex-row lg:items-center lg:gap-1">
