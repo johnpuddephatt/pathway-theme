@@ -27,13 +27,13 @@
     <div class="container flex flex-wrap gap-x-8 gap-y-4">
       @foreach ($key_issues as $issue)
         <a href="{{ get_permalink($issue->ID) }}"
-          class="rounded bg-beige px-6 py-4 text-center md:w-[calc(50%-1rem)] lg:w-[calc(33%-(2rem/3))]">
+          class="rounded bg-beige px-6 py-4 text-center md:w-[calc(50%-1rem)] lg:w-[calc(33%-(4rem/3))]">
           <h2 class="font-bold">{!! $issue->post_title !!}</h2>
         </a>
       @endforeach
       @foreach ($issues as $issue)
         <a x-transition x-show="show_all" href="{{ get_permalink($issue->ID) }}"
-          class="rounded bg-beige bg-opacity-50 px-6 py-4 text-center md:w-[calc(50%-1rem)] lg:w-[calc(33%-(2rem/3))]">
+          class="rounded bg-beige bg-opacity-50 px-6 py-4 text-center md:w-[calc(50%-1rem)] lg:w-[calc(33%-(4rem/3))]">
           <h2 class="font-bold">{!! $issue->post_title !!}</h2>
         </a>
       @endforeach
