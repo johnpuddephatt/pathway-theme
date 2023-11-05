@@ -8,7 +8,7 @@
 
         <div class="flex flex-col items-start gap-0.5 font-semibold lg:flex-row lg:items-center lg:gap-2">
 
-          {{ get_the_date('Y m', $resource->ID) }}
+          {{ get_the_date('F Y', $resource->ID) }}
           @foreach (get_the_terms($resource->ID, 'resource_type') as $term)
             <div
               class="hidden rounded-full bg-white bg-opacity-50 px-4 text-sm font-semibold lowercase antialiased lg:inline-block">
