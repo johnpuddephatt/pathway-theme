@@ -30,18 +30,20 @@
           <h2 class="font-bold">{!! $issue->post_title !!}</h2>
         </a>
       @endforeach
+      @foreach ($issues as $issue)
+        <a x-transition x-show="show_all" href="{{ get_permalink($issue->ID) }}"
+          class="rounded bg-beige bg-opacity-50 px-6 py-4 text-center">
+          <h2 class="font-bold">{!! $issue->post_title !!}</h2>
+        </a>
+      @endforeach
     </div>
 
     <button class="mt-6 rounded-full border-2 border-beige px-8 py-2" x-show="{{ count($issues) }} && !show_all"
       @click="show_all = true">Show all issues</button>
 
-    <div x-show="show_all" x-transition class="container mt-8 grid gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
-      @foreach ($issues as $issue)
-        <a href="{{ get_permalink($issue->ID) }}" class="rounded bg-beige bg-opacity-50 px-6 py-4 text-center">
-          <h2 class="font-bold">{!! $issue->post_title !!}</h2>
-        </a>
-      @endforeach
-    </div>
+    {{-- <div x-show="show_all" x-transition class="container mt-8 grid gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+    
+    </div> --}}
   </div>
 
   <form id="resources" class="bg-beige bg-opacity-70" role="search"
