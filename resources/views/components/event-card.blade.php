@@ -3,7 +3,7 @@
     <div class="flex flex-row items-center lg:gap-12">
       <div class="flex-1 p-4">
 
-        <h3 class="text-xl font-bold lg:text-2xl">{{ $event->post_title }}
+        <h3 class="text-xl font-semibold lg:text-xl">{{ $event->post_title }}
         </h3>
 
         <div class="mt-2 flex-col items-center gap-4 lg:flex lg:flex-row">
