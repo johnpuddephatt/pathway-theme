@@ -4,7 +4,7 @@
     <a class="mb-6 inline-block lg:text-lg"
       href="{{ get_permalink(get_option('page_for_resources')) }}">{!! get_the_title(get_option('page_for_resources')) !!}
       &gt;</a>
-    <h1 class="max-w-4xl text-5xl font-bold">{!! $title !!} </h1>
+    <h1 class="text-txl max-w-4xl font-serif">{!! $title !!} </h1>
     <p class="mb-8 mt-3 text-2xl">{{ get_the_date('F Y') }}</p>
 
     @if ($types)
