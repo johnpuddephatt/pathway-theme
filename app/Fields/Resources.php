@@ -43,7 +43,6 @@ Container::make('post_meta', 'External links')
 Container::make('post_meta', 'Embed')
     ->where('post_type', '=', 'resource')
     ->set_context('side')
-    ->set_collapsed(true)
     ->add_fields([Field::make('complex', 'embeds', 'Embeds')
         ->add_fields([
             Field::make('oembed', 'file_oembed', 'oEmbed URL'),
