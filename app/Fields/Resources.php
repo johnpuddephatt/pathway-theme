@@ -63,6 +63,7 @@ Container::make('post_meta', 'Files')
 
 Container::make('post_meta', 'Key issues')
     ->where('post_type', '=', 'resource')
+    ->set_context('side')
     ->add_fields([
         Field::make('association', 'issues', __(''))->set_types([
             [
