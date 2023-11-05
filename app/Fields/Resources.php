@@ -72,3 +72,12 @@ Container::make('post_meta', 'Key issues')
             ],
         ]),
     ]);
+
+
+    Container::make('post_meta', 'Foo')
+    ->where('post_type', '=', 'resource')
+    ->set_context('side')
+    ->add_fields([
+        Field::make( 'media_gallery', 'crb_media_gallery', __( 'Media Gallery' ) )
+
+    ]);
