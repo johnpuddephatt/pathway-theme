@@ -6,7 +6,7 @@
   </div>
   <div class="flex flex-col items-start p-4 lg:pl-0">
 
-    <h3 class="max-w-3xl text-lg font-bold !leading-tight md:text-2xl">{{ $post->post_title }}</h3>
+    <h3 class="max-w-3xl text-lg font-medium !leading-tight md:text-xl">{{ $post->post_title }}</h3>
     <div class="mt-auto md:mb-3 md:mt-1 md:text-lg">
       {{ get_the_date(null, $post->ID) }}
     </div>
