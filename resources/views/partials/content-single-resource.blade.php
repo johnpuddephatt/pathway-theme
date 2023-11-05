@@ -120,7 +120,7 @@
   <div class="container mb-16 mt-32">
     <h2 class="mb-8 text-3xl font-semibold">Related resources</h2>
 
-    <div class="flex flex-col gap-4">
+    <div class="flex max-w-4xl flex-col gap-4">
       @foreach ($related_resources as $resource)
         <x-resource-card :resource="$resource" />
       @endforeach
