@@ -3,7 +3,7 @@
     <div class="flex flex-row items-center gap-12">
       <div class="px-6">
 
-        <h3 class="text-xl font-bold lg:text-2xl">{{ $vacancy->post_title }}
+        <h3 class="text-lg font-semibold !leading-tight lg:text-xl">{{ $vacancy->post_title }}
         </h3>
 
         <div class="mt-1 flex flex-row items-center gap-2">
