@@ -117,7 +117,7 @@
 @endif
 
 @if ($related_resources && count($related_resources))
-  <div class="container mb-16 mt-32">
+  <div class="container mb-16 mt-24">
     <h2 class="mb-8 text-3xl font-semibold">Related resources</h2>
 
     <div class="flex max-w-4xl flex-col gap-4">
