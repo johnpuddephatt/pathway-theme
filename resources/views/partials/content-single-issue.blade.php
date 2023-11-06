@@ -26,7 +26,7 @@
          @if (count($resources))
      <div class="py-16 bg-beige bg-opacity-50" id="resources">
      <div class="container">
-          <h2 class="mb-8 wp-block-heading relative" >{{ $title }} resources <a href="#resources"
+          <h2 class="mb-8 wp-block-heading relative" >{!! $title !!} resources <a href="#resources"
               class="opacity-0 transition before:absolute before:inset-0 group-hover:opacity-70"><svg
                 xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5"
                 class="inline-block h-6 w-6" viewBox="0 0 24 24">
