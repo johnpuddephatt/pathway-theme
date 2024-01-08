@@ -27,9 +27,9 @@
         <h1 class="mb-2 max-w-4xl font-serif text-4xl lg:mb-8 lg:text-6xl">{!! $title ?? get_the_title() !!}</h1>
 
         @if (isset($subtitle))
-          <p class="relative max-w-lg text-lg !leading-tight lg:text-xl 2xl:text-2xl">{!! $subtitle !!}</h2>
+          <p class="relative max-w-xl text-lg !leading-tight lg:text-xl 2xl:text-2xl">{!! $subtitle !!}</h2>
           @elseif ($post->post_excerpt)
-          <p class="relative max-w-lg text-lg !leading-tight lg:text-xl 2xl:text-2xl">{!! $post->post_excerpt !!}</p>
+          <p class="relative max-w-xl text-lg !leading-tight lg:text-xl 2xl:text-2xl">{!! $post->post_excerpt !!}</p>
         @endif
 
       </div>
