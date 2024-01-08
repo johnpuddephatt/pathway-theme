@@ -129,7 +129,6 @@ class Page extends Composer
             $toc .= '<div class="relative">';
             $toc .= '<h3 class="font-semibold mb-6">On this page</h3><ul>';
 
-            echo strpos($content, '<h2');
             if (strpos($content, '<h2') >= 10) {
                 $toc .=  '<li class="mb-4 leading-tight"><a class="text-opacity-70 text-blue" href="#overview">Overview</a></li>';
             }
