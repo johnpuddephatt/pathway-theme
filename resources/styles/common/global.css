@@ -29,7 +29,8 @@
   @apply hidden;
 }
 
-.page-sidebar-tree .current_page_item > .children {
+.page-sidebar-tree .current_page_item > .children,
+.page-sidebar-tree .current_page_ancestor > .children {
   @apply block;
 }
 
