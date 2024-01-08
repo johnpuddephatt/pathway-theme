@@ -17,8 +17,10 @@
 
       <div class="pb-6 pt-16 md:pb-16 xl:py-36">
         @if ($posts_page_id = get_option('page_for_' . get_post_type(get_the_ID()) . 's'))
-          <a class="mb-6 inline-block lg:text-lg" href="{{ get_permalink($posts_page_id) }}">{!! get_the_title($posts_page_id) !!}
-            &gt;</a>
+          <div>
+            <a class="mb-6 inline-block lg:text-lg" href="{{ get_permalink($posts_page_id) }}">{!! get_the_title($posts_page_id) !!}
+              &gt;</a>
+          </div>
         @endif
 
         @include('partials.entry-meta')
