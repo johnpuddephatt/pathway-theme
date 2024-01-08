@@ -6,7 +6,7 @@
         {{ get_the_date(null, $release->ID) }}
       </div>
 
-      <h3 class="!my-0 mb-1 text-lg font-semibold !leading-tight md:text-xl lg:text-2xl">{{ $release->post_title }}
+      <h3 class="!my-0 mb-1 text-lg font-semibold !leading-tight lg:text-xl">{{ $release->post_title }}
       </h3>
 
     </div>
