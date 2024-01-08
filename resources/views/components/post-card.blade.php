@@ -1,6 +1,6 @@
 <div class="group relative flex flex-row items-center rounded bg-beige bg-opacity-50 transition hover:bg-opacity-80">
   <div class="clip-hex mx-4 my-6 hidden w-20 bg-blue bg-opacity-20 md:block lg:mx-8 lg:w-36">
-    {!! get_the_post_thumbnail($post->ID, '3by2', [
+    {!! get_the_post_thumbnail($post->ID, 'square', [
         'class' => ' h-auto w-full',
     ]) !!}
   </div>
