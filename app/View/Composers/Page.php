@@ -128,7 +128,11 @@ class Page extends Composer
         if ($items) {
             $toc .= '<div class="relative">';
             $toc .= '<h3 class="font-semibold mb-6">On this page</h3><ul>';
-            $toc .=  '<li class="mb-4 leading-tight"><a class="text-opacity-70 text-blue" href="#overview">Overview</a></li>';
+
+            echo strpos($content, '<h2');
+            if (strpos($content, '<h2') >= 10) {
+                $toc .=  '<li class="mb-4 leading-tight"><a class="text-opacity-70 text-blue" href="#overview">Overview</a></li>';
+            }
             foreach ($items as $item) {
                 $toc .= '<li class="mb-4 leading-tight" ><a class="text-opacity-70 text-blue" href="#' . sanitize_title_with_dashes($item[2]) . '">' . $item[2] . '</a></li>';
             }
