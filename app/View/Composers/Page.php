@@ -152,7 +152,7 @@ class Page extends Composer
             $id          = sanitize_title_with_dashes($item[2]);
 
 
-            $replacement   .= sprintf('<div class="group relative"><%1$s id="%2$s">%3$s&nbsp;<a href="#%2$s" class="before:absolute before:inset-0 group-hover:opacity-70 opacity-0 transition "><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6 inline-block" viewBox="0 0 24 24">
+            $replacement   .= sprintf('<div class="group  relative"><%1$s class="flex justify-between gap-2" id="%2$s">%3$s<a href="#%2$s" class="before:absolute before:inset-0 group-hover:opacity-70 opacity-0 transition "><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6 inline-block" viewBox="0 0 24 24">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/>
 </svg></a></div></%1$s>', $tag, $id, $item[2]);
             $replacements[] = $replacement;
