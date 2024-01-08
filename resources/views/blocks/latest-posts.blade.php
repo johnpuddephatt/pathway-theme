@@ -10,7 +10,7 @@
 
           <h3 class="mb-6 max-w-xl text-xl font-bold leading-tight lg:text-2xl">{{ $post->post_title }}</h3>
           <div class="mb-8 max-w-sm lg:max-w-xs">
-            {!! wp_trim_words(get_the_excerpt($post->ID), 15) !!}
+            {!! wp_trim_words($post->post_excerpt ?? get_the_excerpt($post->ID), 30) !!}
           </div>
 
           <a href="{{ get_permalink($post) }}"
