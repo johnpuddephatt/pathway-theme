@@ -6,7 +6,7 @@
       @foreach (get_posts('post_type=post&posts_per_page=3&orderby=date&order=desc') as $post)
         <div class="relative flex flex-col items-start lg:w-1/3">
 
-          <p class="text-semibold mb-2">{{ get_the_date(null, $post->ID) }}</p>
+          <p class="mb-2 font-semibold">{{ get_the_date(null, $post->ID) }}</p>
 
           <h3 class="mb-6 max-w-xl text-xl font-bold leading-tight lg:text-2xl">{{ $post->post_title }}</h3>
           <div class="mb-8 max-w-sm lg:max-w-xs">

@@ -5,17 +5,17 @@
     ]) !!}
   </div>
   <div class="flex flex-col items-start p-4 lg:pl-0">
-
-    <h3 class="max-w-3xl text-lg font-semibold !leading-tight md:text-xl">{{ $post->post_title }}</h3>
-    @if ($post->post_excerpt)
-      <p class="mb-4 mt-2 max-w-2xl">{!! $post->post_excerpt !!}</p>
-    @endif
-    <div class="mt-auto md:mb-3 md:mt-1 md:text-lg">
+    <div class="mb-2 mt-auto font-semibold">
       {{ get_the_date(null, $post->ID) }}
     </div>
-    <a href="{{ get_permalink($post->ID) }}"
+    <h3 class="max-w-3xl text-lg font-semibold !leading-tight md:text-xl">{{ $post->post_title }}</h3>
+    @if ($post->post_excerpt)
+      <p class="mt-6 max-w-3xl">{!! $post->post_excerpt !!}</p>
+    @endif
+
+    {{-- <a href="{{ get_permalink($post->ID) }}"
       class="mt-auto rounded-full bg-blue bg-opacity-80 px-6 py-2 text-sm font-semibold text-white transition duration-300 before:absolute before:inset-0 hover:bg-opacity-100 max-md:h-0 max-md:!p-0 max-md:opacity-0 md:inline-block">
-      Read More</a>
+      Read More</a> --}}
   </div>
 
   @include('partials.card-arrow', ['class' => 'group-hover:bg-beige'])
