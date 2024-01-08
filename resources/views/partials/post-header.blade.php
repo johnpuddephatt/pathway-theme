@@ -21,6 +21,7 @@
             &gt;</a>
         @endif
 
+        @include('partials.entry-meta')
         <h1 class="mb-2 max-w-4xl font-serif text-4xl lg:mb-8 lg:text-6xl">{!! $title ?? get_the_title() !!}</h1>
 
         @if (isset($subtitle))
@@ -29,7 +30,7 @@
             @if ($post->post_excerpt)
               <p class="mb-8 max-w-3xl text-lg font-semibold lg:text-2xl">{!! $post->post_excerpt !!}</p>
             @endif
-            @include('partials.entry-meta')
+
         @endif
       </div>
 
