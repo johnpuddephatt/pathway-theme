@@ -5,7 +5,7 @@
       'class' =>
           'w-full max-lg:clip-hex-bottom lg:absolute max-lg:max-h-96 top-0 right-0  block lg:h-[85%]  lg:w-[calc((0.85*1536px)+((100vw-1536px)/2))] object-cover',
   ]) !!}
-  <div class="container relative flex w-full flex-row items-center lg:h-[45vw] lg:max-h-[50rem]">
+  <div class="container relative flex w-full flex-row items-center max-xl:max-w-none lg:h-[45vw] lg:max-h-[50rem]">
 
     <div class="absolute bottom-0 right-full top-0 hidden h-full w-[9999px] bg-beige bg-opacity-95 lg:block"></div>
     <div class="lg:clip-hex-right absolute left-0 top-0 h-full w-full bg-beige bg-opacity-95 lg:w-[45%]"></div>

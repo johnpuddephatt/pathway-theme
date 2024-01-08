@@ -26,6 +26,9 @@
         @if (isset($subtitle))
           <p class="max-w-sm text-lg font-semibold lg:text-2xl">{!! $subtitle !!}</h2>
           @else
+            @if ($post->post_excerpt)
+              <p class="max-w-sm text-lg font-semibold lg:text-2xl">{!! $post->post_excerpt !!}</p>
+            @endif
             @include('partials.entry-meta')
         @endif
       </div>
