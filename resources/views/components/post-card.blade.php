@@ -8,7 +8,7 @@
 
     <h3 class="max-w-3xl text-lg font-semibold !leading-tight md:text-xl">{{ $post->post_title }}</h3>
     @if ($post->post_excerpt)
-      <p>{!! $post->post_excerpt !!}</p>
+      <p class="mt-4 max-w-xl">{!! $post->post_excerpt !!}</p>
     @endif
     <div class="mt-auto md:mb-3 md:mt-1 md:text-lg">
       {{ get_the_date(null, $post->ID) }}
