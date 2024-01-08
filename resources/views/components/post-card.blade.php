@@ -10,7 +10,7 @@
     </div>
     <h3 class="max-w-3xl text-lg font-semibold !leading-tight md:text-xl lg:text-2xl">{{ $post->post_title }}</h3>
     @if ($post->post_excerpt)
-      <p class="mt-6 max-w-3xl">{!! $post->post_excerpt !!}</p>
+      <p class="mt-4 max-w-3xl">{!! $post->post_excerpt !!}</p>
     @endif
 
     {{-- <a href="{{ get_permalink($post->ID) }}"
