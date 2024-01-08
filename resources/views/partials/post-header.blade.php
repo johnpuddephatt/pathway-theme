@@ -28,12 +28,10 @@
 
         @if (isset($subtitle))
           <p class="relative max-w-md text-lg !leading-tight lg:text-xl 2xl:text-2xl">{!! $subtitle !!}</h2>
-          @else
-            @if ($post->post_excerpt)
-              <p class="mb-8 max-w-3xl text-lg font-semibold lg:text-2xl">{!! $post->post_excerpt !!}</p>
-            @endif
-
+          @elseif ($post->post_excerpt)
+          <p class="relative max-w-md text-lg !leading-tight lg:text-xl 2xl:text-2xl">{!! $post->post_excerpt !!}</p>
         @endif
+
       </div>
 
       {!! get_the_post_thumbnail($page_id ?? null, 'square', [
