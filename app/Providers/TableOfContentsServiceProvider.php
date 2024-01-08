@@ -24,6 +24,5 @@ class TableOfContentsServiceProvider extends SageServiceProvider
     public function boot()
     {
         parent::boot();
-        
     }
 }

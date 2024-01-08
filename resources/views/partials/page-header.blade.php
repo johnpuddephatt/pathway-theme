@@ -23,6 +23,9 @@
           {!! $post->post_excerpt !!}
         </p>
       @endif
+
+      {!! get_the_post_thumbnail($post->ID, '2by1', ['class' => ' mb-8 block h-auto w-full']) !!}
+
     </div>
   </div>
 </div>
