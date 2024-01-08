@@ -56,6 +56,7 @@ const config = {
             '--tw-prose-body': theme('colors.blue'),
             '--tw-prose-headings': theme('colors.blue'),
             '--tw-prose-bold': theme('colors.blue'),
+            '--tw-prose-links': theme('colors.blue'),
           },
         },
       }),

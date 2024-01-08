@@ -47,6 +47,11 @@
   @apply prose xl:prose-lg max-w-none break-words;
 }
 
+.post-content a,
+.page-content a {
+  @apply transition-all font-bold antialiased decoration-blue/20 hover:decoration-blue/70;
+}
+
 .post-content > *:first-child,
 .page-content > *:first-child,
 .page-content > .group:first-child > *:first-child,
