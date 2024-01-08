@@ -39,7 +39,7 @@ h3.wp-block-heading {
 }
 
 .wp-block-quote {
-  @apply my-12;
+  @apply !my-12;
 }
 
 .wp-block-quote cite {
@@ -47,7 +47,7 @@ h3.wp-block-heading {
 }
 
 .wp-block-quote.is-style-large {
-  @apply border-l-0 pl-0 my-20;
+  @apply border-l-0 pl-0 !my-20;
 }
 
 .wp-block-quote.is-style-large p {
