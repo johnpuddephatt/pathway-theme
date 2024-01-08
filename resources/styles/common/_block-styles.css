@@ -38,6 +38,10 @@ h3.wp-block-heading {
   @apply text-xl lg:text-2xl font-bold text-blue !leading-snug !not-italic mb-3;
 }
 
+.wp-block-quote {
+  @apply my-12;
+}
+
 .wp-block-quote cite {
   @apply !not-italic text-lg text-blue font-semibold;
 }
