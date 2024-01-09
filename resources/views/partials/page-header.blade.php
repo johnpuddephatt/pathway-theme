@@ -20,7 +20,7 @@
       </h2>
 
       @if (!empty($post->post_excerpt))
-        <p class="mb-8 max-w-2xl text-xl leading-tight text-blue lg:text-2xl">
+        <p class="mb-8 max-w-2xl text-xl leading-tight text-blue lg:text-xl">
           {!! $post->post_excerpt !!}
         </p>
       @endif
