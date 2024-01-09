@@ -77,3 +77,19 @@ h3.wp-block-heading {
 .wp-block-group.has-background > *:first-child {
   @apply mt-0;
 }
+
+details {
+  @apply border p-4 pb-0  rounded-lg border-beige mb-4;
+}
+
+details[open] {
+  @apply !border pb-4;
+}
+
+summary {
+  @apply bg-beige font-semibold antialiased text-xl -mx-4 -mt-4 transition bg-opacity-30 py-4 px-6 cursor-pointer;
+}
+
+summary:hover {
+  @apply bg-opacity-50;
+}
