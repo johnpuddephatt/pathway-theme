@@ -6,11 +6,12 @@
         <div class="mb-4 text-xl font-bold md:mb-8 md:text-2xl">
           {{ get_the_date() }}
         </div>
-      @elseif(isset($parent))
-        <div class="mb-4 mt-12 inline-flex lowercase text-blue text-opacity-70 md:mb-6">
-          <a class="" href="/">Home</a>
-          <span class="px-3">&gt;</span>
-          <a class="" href="{{ $parent->permalink }}">{!! $parent->title !!}</a>
+      @else
+        @php($ancestors = array_reverse(get_post_ancestors($post->ID)))
+        <div class="mb-4">
+          @foreach ($ancestors as $ancestor)
+            <a href="{{ get_permalink($ancestor) }}">{{ get_the_title($ancestor) }}</a> &gt;
+          @endforeach
         </div>
       @endif
 
