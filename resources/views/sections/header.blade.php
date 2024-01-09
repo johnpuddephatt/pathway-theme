@@ -6,7 +6,7 @@
           <ul class="flex flex-row items-center justify-end gap-8 font-semibold">
             @foreach ($secondaryNavigation as $item)
               <li>
-                <a class="{{ carbon_get_nav_menu_item_meta($item->id, 'crb_is_button') ? 'border-2 border-yellow rounded-full px-6 py-1' : ' ' }} inline-block text-blue text-opacity-70"
+                <a class="{{ carbon_get_nav_menu_item_meta($item->id, 'crb_is_button') ? 'border-2 border-yellow rounded-full px-6 py-1' : ' ' }} inline-block text-blue text-opacity-75"
                   href="{{ $item->url }}">{!! $item->label !!}</a>
               </li>
             @endforeach

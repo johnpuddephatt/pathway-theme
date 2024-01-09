@@ -19,6 +19,7 @@
 
 .wp-block[data-type^='carbon'] {
   @apply max-w-none !important;
+  @apply relative before:inset-0 before:absolute before:z-20;
 }
 
 .editor-post-title__input {

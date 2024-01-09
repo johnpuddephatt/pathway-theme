@@ -1,23 +1,24 @@
-  <a href="{{ get_permalink($resource->ID) }}"
-    class="group relative block overflow-hidden rounded bg-yellow bg-opacity-30 transition hover:bg-opacity-40">
-    <div class="flex flex-row items-center border-l-8 border-yellow lg:gap-12 lg:border-l-[2rem]">
-      <div class="px-3 lg:px-6">
+<a href="{{ get_permalink($resource->ID) }}"
+  class="wp-block not-prose group relative block overflow-hidden rounded bg-yellow bg-opacity-30 font-normal !no-underline transition hover:bg-opacity-40">
+  <div class="flex flex-row items-center border-l-8 border-yellow lg:border-l-[1.25rem]">
 
-        <h3 class="mb-1 text-xl font-semibold !leading-tight lg:mb-2">{{ $resource->post_title }}
-        </h3>
+    <div class="flex-1 p-4">
+      <div class="mb-0.5 font-semibold leading-tight antialiased"> {{ get_the_date('F Y', $resource->ID) }}</div>
 
-        <div class="flex flex-col items-start gap-0.5 font-semibold lg:flex-row lg:items-center lg:gap-1">
+      <h3 class="mb-2 text-xl font-semibold !leading-tight lg:mb-2.5">{{ $resource->post_title }}
+      </h3>
 
-          {{ get_the_date('F Y', $resource->ID) }}&nbsp;
-          @foreach (get_the_terms($resource->ID, 'resource_type') as $term)
-            <div
-              class="hidden rounded-full bg-white bg-opacity-50 px-4 py-0.5 text-sm font-semibold lowercase antialiased lg:inline-block">
-              {{ $term->name }}
-            </div>
-          @endforeach
-        </div>
+      <div class="flex flex-row items-center gap-0.5 lg:gap-1">
 
+        @foreach (get_the_terms($resource->ID, 'resource_type') as $term)
+          <div
+            class="hidden rounded bg-white bg-opacity-60 px-2 py-0.5 text-sm !font-semibold lowercase antialiased lg:inline-block">
+            {{ $term->name }}
+          </div>
+        @endforeach
       </div>
-      @include('partials.card-arrow', ['class' => 'group-hover:bg-yellow group-hover:bg-opacity-30'])
+
     </div>
-  </a>
+    @include('partials.card-arrow', ['class' => 'group-hover:bg-yellow group-hover:bg-opacity-30'])
+  </div>
+</a>

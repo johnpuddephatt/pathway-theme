@@ -59,8 +59,8 @@
   @apply !mt-0;
 }
 
-.page-content *,
-.post-content * {
+.page-content > *,
+.post-content > * {
   max-width: var(--wp--style--global--content-size);
 }
 
