@@ -8,6 +8,10 @@
   @apply font-sans 2xl:text-lg text-blue;
 }
 
+.is-root-container {
+  @apply prose prose-lg max-w-none;
+}
+
 .wp-block:not([data-type^='carbon']) {
   max-width: var(--wp--style--global--content-size);
   @apply mx-auto !important;
