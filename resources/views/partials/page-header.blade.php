@@ -24,7 +24,7 @@
         </p>
       @endif
 
-      {!! get_the_post_thumbnail($post->ID, '2by1', ['class' => ' mb-8 block h-auto w-full']) !!}
+      {!! get_the_post_thumbnail($post->ID, '2by1', ['class' => ' rounded mb-8 block h-auto w-full']) !!}
 
     </div>
   </div>
