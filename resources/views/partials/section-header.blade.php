@@ -13,7 +13,7 @@
     </div>
     <h1 class="relative mb-2 max-w-md font-serif text-4xl antialiased md:mb-4 lg:mb-8 lg:text-6xl">
       {!! $title ?? get_the_title() !!}</h1>
-    <div class="relative max-w-xl text-lg !leading-tight lg:text-xl 2xl:text-2xl">
+    <div class="relative max-w-md text-lg font-semibold lg:text-xl 2xl:text-2xl">
       {!! $excerpt ?? get_the_excerpt() !!}
     </div>
   </div>

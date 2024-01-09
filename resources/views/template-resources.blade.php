@@ -12,7 +12,7 @@
       <div class="relative flex-none pt-12 md:w-1/2 lg:py-16">
 
         <h1 class="mb-8 max-w-md font-serif text-4xl lg:text-6xl">{!! the_title() !!}</h1>
-        <div class="max-w-md text-lg font-semibold lg:text-xl">
+        <div class="max-w-md text-lg font-semibold lg:text-xl 2xl:text-2xl">
           {!! the_excerpt() !!}
         </div>
       </div>
