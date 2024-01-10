@@ -1,6 +1,6 @@
 @if ($resource)
   <div
-    class="wp-block not-prose relative mb-16 overflow-hidden rounded border border-beige bg-yellow px-12 py-8 lg:mb-24">
+    class="wp-block not-prose relative my-16 overflow-hidden rounded border border-beige bg-green px-12 py-8 lg:mb-24">
     <svg class="absolute -right-12 top-1/2 h-auto w-full max-w-none -translate-y-1/2 md:w-3/4"
       xmlns="http://www.w3.org/2000/svg" width="1047.58" height="1050" viewBox="0 0 1047.58 1050">
       <path fill="#fff"
@@ -8,9 +8,9 @@
         opacity=".1" />
     </svg>
     <div
-      class="pointer-events-none absolute bottom-0 left-0 top-0 h-full w-[75%] bg-gradient-to-r from-yellow from-15% to-transparent">
+      class="pointer-events-none absolute bottom-0 left-0 top-0 h-full w-[75%] bg-gradient-to-r from-green from-15% to-transparent">
     </div>
-    <div class="flex flex-col pb-4 lg:flex-row lg:items-center">
+    <div class="flex flex-col pb-12 lg:flex-row lg:items-center">
       <div class="relative flex flex-1 flex-col items-start justify-start lg:mx-auto lg:w-2/3">
         <h2 class="text-balance relative mt-2 max-w-lg pb-4 pt-8 font-serif text-2xl md:text-3xl lg:pr-0">
           <span
