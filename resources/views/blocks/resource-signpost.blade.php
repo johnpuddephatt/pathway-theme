@@ -10,7 +10,7 @@
         <div class="text-sm font-semibold leading-tight antialiased">Research, Policy &amp; Practice &gt;
         </div>
 
-        <h3 class="mb-1 text-xl font-semibold !leading-tight">{{ $resource->post_title }}
+        <h3 class="mb-1 text-xl font-semibold !leading-tight">{{ $fields->title ?: $resource->post_title }}
         </h3>
 
         {{-- <span class="inline-block rounded-full bg-white px-4 py-1 text-sm">Access this resource</span> --}}

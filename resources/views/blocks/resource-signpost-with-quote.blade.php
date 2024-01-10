@@ -11,7 +11,7 @@
       class="pointer-events-none absolute bottom-0 left-0 top-0 h-full w-[75%] bg-gradient-to-r from-yellow from-15% to-transparent">
     </div>
     <div class="flex flex-col pb-4 lg:flex-row lg:items-center">
-      <div class="relative flex flex-col items-start justify-start lg:mx-auto lg:w-2/3">
+      <div class="relative flex flex-1 flex-col items-start justify-start lg:mx-auto lg:w-2/3">
         <h2 class="text-balance relative mt-2 max-w-lg pb-4 pt-8 font-serif text-2xl md:text-3xl lg:pr-0">
           <span
             class="block align-bottom font-[math] text-8xl !leading-[0.1px] text-white md:-ml-[2.5rem] md:pr-0 lg:text-8xl">“</span>{{ $fields->quote }}<span
@@ -25,20 +25,22 @@
 
       </div>
 
-      <div class="relative w-1/2 pl-12 max-lg:left-1/2 lg:w-1/3">
-        {!! wp_get_attachment_image($fields->image, 'thumbnail', false, [
-            'class' => 'block w-full clip-hex h-auto  object-cover',
-            'sizes' => '30vw',
-        ]) !!}
+      @if ($fields->image)
+        <div class="relative w-1/2 flex-none pl-12 max-lg:left-1/2 lg:w-1/3">
+          {!! wp_get_attachment_image($fields->image, 'thumbnail', false, [
+              'class' => 'block w-full clip-hex h-auto  object-cover',
+              'sizes' => '30vw',
+          ]) !!}
 
-        {{-- <svg xmlns="http://www.w3.org/2000/svg"
+          {{-- <svg xmlns="http://www.w3.org/2000/svg"
           class="pointer-events-none absolute left-[60%] top-0 h-[170%] w-auto -translate-y-[29%] opacity-30"
           width="417.29" height="1135.45" viewBox="0 0 417.29 1135.45">
           <path fill="#fff"
             d="M236.19 7.38a55.09 55.09 0 0 0-55.09 0L71 70.94 24.08 98.03A48.18 48.18 0 0 0 0 139.75v181.31a55.1 55.1 0 0 0 27.55 47.71l157 90.65a48.19 48.19 0 0 0 48.17 0l157-90.65a55.11 55.11 0 0 0 27.57-47.71V143.74a55.1 55.1 0 0 0-27.54-47.71ZM196.21 880.49a30.59 30.59 0 0 0-30.63 0l-61.23 35.34-26.06 15.07a26.79 26.79 0 0 0-13.39 23.19v100.83a30.64 30.64 0 0 0 15.32 26.53l87.31 50.41a26.77 26.77 0 0 0 26.79 0l87.31-50.41a30.64 30.64 0 0 0 15.32-26.53v-98.6a30.62 30.62 0 0 0-15.32-26.53Z"
             class="prefix__cls-1" />
         </svg> --}}
-      </div>
+        </div>
+      @endif
     </div>
     @include('blocks.resource-signpost')
 
