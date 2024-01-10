@@ -1,7 +1,7 @@
 @include('partials.resource-header')
 
 <div class="container py-16">
-  <div class="post-content">
+  <div class="post-content prose xl:prose-lg">
     {{ the_content() }}
   </div>
 </div>

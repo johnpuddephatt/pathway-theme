@@ -44,7 +44,7 @@
 
 .post-content,
 .page-content {
-  @apply prose xl:prose-lg max-w-none break-words;
+  @apply max-w-none break-words;
 }
 
 .post-content a,

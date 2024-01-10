@@ -31,7 +31,7 @@
 @endif
   </ul>
   </div>
-  <div class="post-content flex-1">
+  <div class="post-content prose flex-1 xl:prose-lg">
     @php(the_content())
   </div>
   </div>

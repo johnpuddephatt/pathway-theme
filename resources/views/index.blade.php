@@ -1,6 +1,6 @@
 @extends('layouts.app') @section('content')
   @include('partials.section-header', ['background_colour' => 'bg-pink'])
-  <div class="container pb-24 lg:space-y-8" id="news">
+  <div class="container pb-24 lg:max-w-5xl lg:space-y-8" id="news">
 
     @if (!have_posts())
       <x-alert type="warning">
@@ -16,7 +16,7 @@
         <x-post-card :post="get_post()" />
       @endwhile
     </div>
-    <div class="container mt-12 text-right text-xl">
+    <div class="mt-12 text-right text-xl">
       {!! paginate_links([
           'prev_text' => '<',
           'next_text' => '>',

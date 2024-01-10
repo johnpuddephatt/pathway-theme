@@ -6,7 +6,7 @@
   @include('partials.section-header', ['background_colour' => 'bg-yellow'])
   <div class="container mb-24 space-y-8 lg:max-w-5xl">
 
-    <div class="page-content">
+    <div class="page-content prose xl:prose-lg">
       {!! the_content() !!}
     </div>
 

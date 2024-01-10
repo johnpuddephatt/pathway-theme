@@ -49,7 +49,7 @@
 
   <form id="resources" class="bg-beige bg-opacity-70" role="search"
     action="{{ get_permalink(get_option('page_for_resources')) }}" method="get">
-    <div class="container flex max-w-6xl flex-wrap gap-y-3 py-12 lg:flex-nowrap">
+    <div class="container flex flex-wrap gap-y-3 py-12 lg:max-w-5xl lg:flex-nowrap">
       <input aria-label="Text to search for" type="text" name="search" placeholder="Search resources by title"
         value="{{ $_GET['search'] ?? '' }}"
         class="max-w-xs flex-1 appearance-none rounded-full border-2 border-beige px-6 py-2 text-lg lg:w-full" />
@@ -101,22 +101,22 @@
   </form>
 
   @if (!$resources->have_posts())
-    <div class="container my-16 max-w-6xl">
+    <div class="container my-16 lg:max-w-5xl">
       <x-alert type="warning">
         Sorry, no resources matching your criteria were found.
       </x-alert>
     </div>
   @else
-    <h2 class="container mt-16 max-w-6xl text-2xl font-semibold">{{ $results_title }}</h2>
+    <h2 class="container mt-16 text-2xl font-semibold lg:max-w-5xl xl:text-3xl">{{ $results_title }}</h2>
 
-    <div class="container mb-16 mt-12 flex max-w-6xl flex-col gap-4">
+    <div class="container mb-16 mt-12 flex flex-col gap-4 lg:max-w-5xl">
       @while ($resources->have_posts())
         @php($resources->the_post())
         <x-resource-card :resource="get_post()" />
       @endwhile
     </div>
   @endif
-  <div class="container mb-16 max-w-6xl text-right text-xl">
+  <div class="container mb-16 text-right text-xl lg:max-w-5xl">
     {!! paginate_links([
         'total' => $resources->max_num_pages,
         'prev_text' => '<',

@@ -13,7 +13,7 @@
           </div>
         </div>
         <div class="lg:px-0">
-          <div class="post-content" id="overview">
+          <div class="prose xl:prose-lg post-content" id="overview">
             {!! $content !!}
           </div>
 
