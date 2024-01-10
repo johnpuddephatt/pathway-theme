@@ -1,6 +1,6 @@
 @if ($resource)
   <a href="{{ get_permalink($resource->ID) }}"
-    class="wp-block not-prose group relative block overflow-hidden rounded bg-white font-normal !no-underline transition">
+    class="wp-block not-prose group relative my-8 block overflow-hidden rounded bg-white font-normal !no-underline transition">
     <div
       class="flex flex-row items-center border-l-8 border-yellow border-opacity-75 bg-yellow bg-opacity-30 bg-clip-padding transition hover:bg-opacity-40 lg:border-l-[1.25rem]">
       {{-- <div
