@@ -12,11 +12,16 @@
     </div>
     <div class="flex flex-col pb-4 lg:flex-row lg:items-center">
       <div class="relative flex flex-col items-start justify-start lg:mx-auto lg:w-2/3">
-        <h2 class="text-balance relative mt-2 max-w-lg py-8 font-serif text-2xl md:text-3xl lg:pr-0">
+        <h2 class="text-balance relative mt-2 max-w-lg pb-4 pt-8 font-serif text-2xl md:text-3xl lg:pr-0">
           <span
             class="block align-bottom font-[math] text-8xl !leading-[0.1px] text-white md:-ml-[2.5rem] md:pr-0 lg:text-8xl">“</span>{{ $fields->quote }}<span
             class="absolute -bottom-4 left-full -ml-8 align-bottom font-[math] text-8xl !leading-[0.1px] text-white lg:ml-0 lg:text-8xl">”</span>
         </h2>
+        @if (isset($fields->citation))
+          <div class="max-w-sm text-lg lg:max-w-lg">
+            {{ $fields->citation }}
+          </div>
+        @endif
 
       </div>
 

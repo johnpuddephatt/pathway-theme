@@ -5,10 +5,14 @@ use Carbon_Fields\Field;
 
 Block::make(__('Resource signpost with quote'))
     ->add_fields([
-        Field::make('text', 'quote', __('Quote'))->set_default_value(
+        Field::make('textarea', 'quote', __('Quote'))->set_default_value(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         ),
-
+        Field::make(
+            'text',
+            'citation',
+            __('Citation/Description')
+        ),
         Field::make('image', 'image', __('Image')),
         Field::make('association', 'resource', __('Association'))
             ->set_types([
