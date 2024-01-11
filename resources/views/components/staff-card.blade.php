@@ -1,4 +1,4 @@
-<a class="not-prose flex flex-row items-center gap-4 overflow-hidden rounded bg-beige bg-opacity-30 px-6 pb-12 pt-6 !no-underline transition hover:bg-opacity-60 sm:block sm:flex-col xl:text-base"
+<a class="not-prose flex flex-row items-center gap-4 overflow-hidden rounded bg-beige bg-opacity-30 px-4 pb-12 pt-6 !no-underline transition hover:bg-opacity-60 sm:block sm:flex-col xl:text-base 2xl:px-6"
   href="{{ get_permalink($person->ID) }}">
   <div class="mb-4 h-32 w-32 overflow-hidden rounded-full bg-beige bg-opacity-50">
     {!! get_the_post_thumbnail($person->ID, 'square-xs', [
