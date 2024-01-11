@@ -32,7 +32,7 @@ Block::make(__('Team members'))
                 'posts_per_page' => -1,
                 'orderby' => 'menu_order',
                 'order' => 'ASC',
-
+                'numberposts' => -1,
                 'tax_query' => [
                     [
                         'taxonomy' => 'role_type',

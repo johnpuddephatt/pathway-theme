@@ -1,4 +1,4 @@
-<div class="wp-block my-16">
+<div class="wp-block alignwide my-16">
 
   <h2 class="wp-block-heading mb-8">{{ $fields->title ?? 'Staff' }}</h2>
 
