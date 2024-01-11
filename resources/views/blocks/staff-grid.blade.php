@@ -6,7 +6,7 @@
     <p>{{ $fields->description }}</p>
   @endif
 
-  <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:gap-8">
+  <div class="space-y-4 2xl:space-y-8">
     @foreach ($staff as $person)
       @include('components.staff-card', ['person' => $person])
     @endforeach
