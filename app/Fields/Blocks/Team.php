@@ -29,6 +29,10 @@ Block::make(__('Team members'))
             'fields' => (object) $fields,
             'staff' => get_posts([
                 'post_type' => 'person',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+
                 'tax_query' => [
                     [
                         'taxonomy' => 'role_type',
