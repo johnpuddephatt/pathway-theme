@@ -4,8 +4,9 @@
     {!! get_the_post_thumbnail($person->ID, 'square-xs', [
         'class' => ' !my-0 w-32 h-32',
     ]) !!}
-    <div>
-      <h3 class="mb-1 mt-2 text-lg font-semibold leading-none">{{ $person->post_title }}</h3>
-      <div class="leading-none"> {{ carbon_get_post_meta($person->ID, 'role_title') }}</div>
-    </div>
+  </div>
+  <div>
+    <h3 class="mb-1 mt-2 text-lg font-semibold leading-none">{{ $person->post_title }}</h3>
+    <div class="leading-none"> {{ carbon_get_post_meta($person->ID, 'role_title') }}</div>
+  </div>
 </a>
