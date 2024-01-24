@@ -1,13 +1,13 @@
 @if ($resource)
-  <div class="wp-block not-prose relative my-8 overflow-hidden rounded border border-beige bg-green px-12 pt-8 lg:mb-24">
-    <svg class="absolute -right-12 top-1/2 h-auto w-full max-w-none -translate-y-1/2 md:w-3/4"
+  <div class="wp-block not-prose relative my-8 overflow-hidden rounded border border-beige bg-beige px-12 pt-8 lg:mb-24">
+    <svg class="`rotate-12 absolute -right-12 top-1/2 h-auto w-full max-w-none -translate-y-1/2 md:w-3/4"
       xmlns="http://www.w3.org/2000/svg" width="1047.58" height="1050" viewBox="0 0 1047.58 1050">
       <path fill="#fff"
         d="M98.71 874.01a66.61 66.61 0 0 1-25-62l37.57-267.6a69.13 69.13 0 0 1 41.38-53.86l248.9-105.32a66.67 66.67 0 0 1 66.44 8.21l183.61 141 186.07-78.73 27.88-198.85-157.06-120.6-598.88 253.4c-32.49 13.74-69.45-1.39-82.56-33.78s2.62-69.82 35.11-83.57L693.04 5.37a66.61 66.61 0 0 1 66.51 8.26l211.36 162.3.14.11a66.61 66.61 0 0 1 25 61.92l-37.54 267.71a69.22 69.22 0 0 1-41.38 53.86l-250 105.79a67.92 67.92 0 0 1-28.71 5.31 65.39 65.39 0 0 1-37.75-13.53l-183.59-141-184.94 78.25-27.88 198.85 157.06 120.6 599.14-253.51c32.49-13.75 69.46 1.37 82.56 33.78s-2.62 69.82-35.11 83.57l-631.2 267.04a66.65 66.65 0 0 1-66.43-8.21L98.85 874.12ZM.05 834.34H0Zm715.7-494.63Z"
-        opacity=".1" />
+        opacity=".3" />
     </svg>
     <div
-      class="pointer-events-none absolute bottom-0 left-0 top-0 h-full w-[75%] bg-gradient-to-r from-green from-15% to-transparent">
+      class="pointer-events-none absolute bottom-0 left-1/4 top-0 h-full w-[50%] bg-gradient-to-r from-beige from-15% to-transparent">
     </div>
     <div class="flex flex-col pb-4 lg:flex-row lg:items-center">
       <div class="relative flex flex-1 flex-col items-start justify-start lg:mx-auto lg:w-2/3">

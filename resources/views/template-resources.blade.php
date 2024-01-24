@@ -48,8 +48,8 @@
   </div>
 
   <form id="resources" class="bg-beige bg-opacity-70" role="search"
-    action="{{ get_permalink(get_option('page_for_resources')) }}" method="get">
-    <div class="container flex flex-wrap gap-y-3 py-12 lg:max-w-5xl lg:flex-nowrap">
+    action="{{ get_permalink(get_option('page_for_resources')) }}#resources" method="get">
+    <div class="container flex flex-wrap gap-y-3 py-12 lg:flex-nowrap">
       <input aria-label="Text to search for" type="text" name="search" placeholder="Search resources by title"
         value="{{ $_GET['search'] ?? '' }}"
         class="max-w-xs flex-1 appearance-none rounded-full border-2 border-beige px-6 py-2 text-lg lg:w-full" />
