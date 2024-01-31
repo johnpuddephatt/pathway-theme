@@ -23,7 +23,11 @@
           </div>
         @endif
 
-        @include('partials.entry-meta')
+        @if ($post->post_type == 'post')
+          <time class="mb-4 inline-block text-lg lg:text-2xl" datetime="{{ get_post_time('c', true) }}">
+            {{ get_the_date() }}
+          </time>
+        @endif
         <h1 class="mb-2 max-w-4xl font-serif text-4xl lg:mb-8 lg:text-6xl">{!! $title ?? get_the_title() !!}</h1>
 
         @if (isset($subtitle))
