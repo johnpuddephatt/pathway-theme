@@ -27,8 +27,8 @@ class EventArchive extends Composer
                     [
                         'key' => 'start_date',
                         'compare' => '>=',
-                        'value' => current_time('mysql'),
-                        'type' => 'DATETIME',
+                        'value' => date('Y-m-d'),
+                        'type' => 'DATE',
                     ]
                 ]
             ]),
@@ -41,8 +41,8 @@ class EventArchive extends Composer
                     [
                         'key' => 'start_date',
                         'compare' => '<',
-                        'value' => current_time('mysql'),
-                        'type' => 'DATETIME',
+                        'value' => date('Y-m-d'),
+                        'type' => 'DATE',
                     ]
                 ]
             ]),

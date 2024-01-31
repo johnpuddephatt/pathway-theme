@@ -1,16 +1,29 @@
 <article
   @php(post_class())>
-  @include('partials.post-header', ['subtitle' =>   carbon_get_post_meta(get_the_ID(), 'start_date') ? date(get_option('date_format'), strtotime(carbon_get_post_meta(get_the_ID(), 'start_date'))) : '', 'background_colour' => 'bg-blue text-white'])
+  @include('partials.post-header', [
+    'subtitle' =>   (carbon_get_post_meta(get_the_ID(), 'start_date') ? date(get_option('date_format'), strtotime(carbon_get_post_meta(get_the_ID(), 'start_date'))) : ''). (carbon_get_post_meta(get_the_ID(), 'end_date') ? ' &ndash; ' . date(get_option('date_format'), strtotime(carbon_get_post_meta(get_the_ID(), 'end_date'))) : ''),
+    'background_colour' => 'bg-blue text-white'
+  ])
   <div class="container mb-24">
     <div class="flex flex-col gap-8 lg:flex-row-reverse items-start">
       <div class="w-full md:max-w-screen-sm lg:w-96 rounded bg-blue bg-opacity-10 p-8 pb-4">
       <h3 class="font-bold text-xl mb-3">Key information</h3>
         <ul class="max-w-lg divide-y divide-blue divide-opacity-20">
          @if (carbon_get_post_meta(get_the_ID(), 'start_date'))
-            <li class="py-6 flex flex-row gap-2 leading-none"><div class="font-semibold w-24">Time/date:</div> 
+            <li class="py-6 flex flex-row gap-2 leading-none"><div class="font-semibold w-24">Date:</div> 
             <div>
-         {{ date(get_option('time_format') . ' ' . get_option('date_format'), strtotime(carbon_get_post_meta(get_the_ID(), 'start_date'))) }}
-        
+         {{ date(get_option('date_format'), strtotime(carbon_get_post_meta(get_the_ID(), 'start_date'))) }}
+            @if (carbon_get_post_meta(get_the_ID(), 'end_date'))
+              &ndash; {{ date(get_option('date_format'), strtotime(carbon_get_post_meta(get_the_ID(), 'end_date'))) }}
+            @endif
+            </div>
+            @endif
+
+
+            @if (carbon_get_post_meta(get_the_ID(), 'time'))
+            <li class="py-6 flex flex-row gap-2 leading-none"><div class="font-semibold w-24">Time:</div>
+            <div>
+            {{ carbon_get_post_meta(get_the_ID(), 'time') }}
             </div>
             @endif
           @if (carbon_get_post_meta(get_the_ID(), 'location'))
