@@ -1,4 +1,4 @@
-@if ($resource)
+@if (isset($fields->quote))
   <div class="wp-block not-prose relative my-8 overflow-hidden rounded border border-beige bg-beige px-12 pt-8 lg:mb-24">
     <svg class="`rotate-12 absolute -right-12 top-1/2 h-auto w-full max-w-none -translate-y-1/2 md:w-3/4"
       xmlns="http://www.w3.org/2000/svg" width="1047.58" height="1050" viewBox="0 0 1047.58 1050">
@@ -41,6 +41,7 @@
         </div>
       @endif
     </div>
+
     @include('blocks.resource-signpost')
 
   </div>
