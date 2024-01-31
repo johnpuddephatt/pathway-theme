@@ -13,11 +13,11 @@
     @if ($events->have_posts() && $past_events->have_posts())
       <div class="flex flex-row items-center justify-end gap-2">
 
-        <a href="{{ get_permalink() }}?past=1"
+        <a href="{{ get_permalink() }}?past=1#events"
           class="{{ isset($_GET['past']) ? 'bg-blue text-white' : '' }} inline-block rounded-full bg-opacity-80 px-10 py-2.5 font-semibold transition duration-300 hover:bg-opacity-100">
           Past Events
         </a>
-        <a href="{{ get_permalink() }}"
+        <a href="{{ get_permalink() }}#events"
           class="{{ isset($_GET['past']) ? '' : 'bg-blue text-white' }} inline-block rounded-full bg-opacity-80 px-10 py-2.5 font-semibold transition duration-300 hover:bg-opacity-100">
           Upcoming Events
         </a>
