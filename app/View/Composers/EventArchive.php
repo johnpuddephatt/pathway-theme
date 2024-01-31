@@ -21,10 +21,13 @@ class EventArchive extends Composer
             "events" => new \WP_Query([
                 'post_type' => 'event',
                 // 'meta_key' => 'start_date',
+                // 'meta_type' => 'DATE',
                 // 'orderby' => 'meta_value',
                 // 'order' => 'DESC',
+                'orderby' => ['start_date' => 'DESC'],
+
                 'meta_query' => [
-                    [
+                    'start_date' => [
                         'key' => 'start_date',
                         'compare' => '>=',
                         'value' => date('Y-m-d'),
@@ -35,10 +38,13 @@ class EventArchive extends Composer
             "past_events" => new \WP_Query([
                 'post_type' => 'event',
                 // 'meta_key' => 'start_date',
+                // 'meta_type' => 'DATE',
                 // 'orderby' => 'meta_value',
                 // 'order' => 'DESC',
+                'orderby' => ['start_date' => 'DESC'],
+
                 'meta_query' => [
-                    [
+                    'start_date' => [
                         'key' => 'start_date',
                         'compare' => '<',
                         'value' => date('Y-m-d'),
