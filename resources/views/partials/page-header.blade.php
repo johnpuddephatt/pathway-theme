@@ -6,7 +6,7 @@
         <div class="mb-4 text-xl font-bold md:mb-8 md:text-2xl">
           {{ get_the_date() }}
         </div>
-      @else
+      @elseif(isset($post))
         @php($ancestors = array_reverse(get_post_ancestors($post->ID)))
         <div class="mb-4">
           @foreach ($ancestors as $ancestor)
