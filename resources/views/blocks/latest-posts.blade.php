@@ -3,7 +3,12 @@
 
   <div class="container">
     <div class="mb-16 mt-16 flex flex-col gap-12 lg:flex-row lg:gap-8">
-      @foreach (get_posts('post_type=post&posts_per_page=3&orderby=date&order=desc') as $post)
+      @foreach (get_posts([
+        'post_type' => ['post', 'press_release'],
+        'posts_per_page' => 3,
+        'orderby' => 'date',
+        'order' => 'desc',
+    ]) as $post)
         <div class="relative flex flex-col items-start lg:w-1/3">
 
           <p class="mb-2 font-semibold">{{ get_the_date(null, $post->ID) }}</p>
