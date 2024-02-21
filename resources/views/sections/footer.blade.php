@@ -39,9 +39,24 @@
         @endif
 
       </div>
-      @if (carbon_get_theme_option('footer_text'))
-        <p class="mt-12 text-sm text-white text-opacity-80">{!! nl2br(carbon_get_theme_option('footer_text')) !!}</p>
-      @endif
+      <div>
+        @if ($footerNavigation)
+          <div class="mb-2 text-sm text-white text-opacity-90">
+            <nav>
+              <ul class="flex flex-row gap-3">
+                @foreach ($footerNavigation as $item)
+                  <li>
+                    <a class="inline-block" href="{{ $item->url }}">{{ $item->label }}</a>
+                  </li>
+                @endforeach
+              </ul>
+            </nav>
+          </div>
+        @endif
+        @if (carbon_get_theme_option('footer_text'))
+          <p class="mt-12 text-sm text-white text-opacity-80">{!! nl2br(carbon_get_theme_option('footer_text')) !!}</p>
+        @endif
+      </div>
 
     </div>
 

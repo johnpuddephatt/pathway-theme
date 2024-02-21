@@ -25,6 +25,7 @@ class App extends Composer
             'siteName' => $this->siteName(),
             'primaryNavigation' => $this->primaryNavigation(),
             'secondaryNavigation' => $this->secondaryNavigation(),
+            'footerNavigation' => $this->footerNavigation(),
         ];
     }
 
@@ -52,6 +53,17 @@ class App extends Composer
     public function secondaryNavigation()
     {
         $navigation = (new Navi())->build('secondary_navigation');
+
+        if ($navigation->isEmpty()) {
+            return;
+        }
+
+        return $navigation->toArray();
+    }
+
+    public function footerNavigation()
+    {
+        $navigation = (new Navi())->build('footer_navigation');
 
         if ($navigation->isEmpty()) {
             return;

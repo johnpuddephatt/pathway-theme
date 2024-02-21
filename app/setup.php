@@ -90,7 +90,7 @@ add_action(
     100
 );
 
-add_action( 'edit_form_top', function(){
+add_action('edit_form_top', function () {
     return '<div style="margin-top: 10px;padding: 15px;color: #fff;background: #673AB7;clear: both;">
 		Place of the hook <b>edit_form_top</b>.
 	</div>';
@@ -132,6 +132,7 @@ add_action(
         register_nav_menus([
             'primary_navigation' => __('Primary Navigation', 'sage'),
             'secondary_navigation' => __('Secondary Navigation', 'sage'),
+            'footer_navigation' => __('Footer Navigation', 'sage'),
         ]);
 
         /**
@@ -177,7 +178,7 @@ add_action(
             'style',
         ]);
 
-        add_post_type_support( 'page', 'excerpt' );
+        add_post_type_support('page', 'excerpt');
 
 
         /**
