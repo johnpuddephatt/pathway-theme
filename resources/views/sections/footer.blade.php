@@ -39,7 +39,7 @@
         @endif
 
       </div>
-      <div>
+      <div class="mt-12">
         @if ($footerNavigation)
           <div class="mb-2 text-sm text-white text-opacity-90">
             <nav>
@@ -54,7 +54,7 @@
           </div>
         @endif
         @if (carbon_get_theme_option('footer_text'))
-          <p class="mt-12 text-sm text-white text-opacity-80">{!! nl2br(carbon_get_theme_option('footer_text')) !!}</p>
+          <p class="text-sm text-white text-opacity-80">{!! nl2br(carbon_get_theme_option('footer_text')) !!}</p>
         @endif
       </div>
 
