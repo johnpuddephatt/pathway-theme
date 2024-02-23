@@ -1,4 +1,4 @@
-<div class="relative max-lg:bg-beige lg:mb-12 xl:mb-24">
+<div class="relative mb-6 max-lg:bg-beige lg:mb-12 xl:mb-24">
 
   {!! wp_get_attachment_image($fields->image, '2by1', false, [
       'sizes' => '80vw',
