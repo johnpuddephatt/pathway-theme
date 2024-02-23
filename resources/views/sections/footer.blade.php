@@ -1,7 +1,7 @@
 <footer class="bg-blue pb-4 pt-24 text-beige antialiased lg:pb-8">
   <div class="container flex max-w-none flex-col justify-between gap-16 lg:flex-row">
     <div>
-      <x-logo class="h-auto w-96" />
+      <x-logo class="h-auto w-[22.5rem]" />
 
     </div>
     <div class="lg:ml-auto">
