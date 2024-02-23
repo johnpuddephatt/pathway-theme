@@ -22,7 +22,7 @@
             class="prefix__cls-1" />
         </svg>
       </div>
-      <h2 class="text-balance relative mb-6 mt-6 max-w-lg pr-4 font-serif text-4xl md:text-5xl lg:pr-0">
+      <h2 class="text-balance relative mb-6 mt-6 max-w-2xl pr-4 font-serif text-4xl md:text-5xl lg:pr-0">
         {{ $fields->title }}
       </h2>
 
