@@ -1,4 +1,4 @@
-<div class="relative mb-16 flex min-h-[16rem] flex-row items-end bg-green lg:min-h-[20rem]">
+<div class="relative flex min-h-[16rem] flex-row items-end bg-green lg:min-h-[20rem]">
   <div class="pointer-events-none absolute inset-0 left-0 top-0 h-full w-full overflow-hidden">
     <svg class="absolute -left-16 top-1/2 h-auto w-3/5 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="988.81"
       height="992.23" viewBox="0 0 988.81 992.23">

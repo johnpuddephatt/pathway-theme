@@ -2,7 +2,9 @@
 
   <article
     @php(post_class())>
-    <div class="container mx-auto pb-32">
+
+    @if ($content)
+    <div class="mt-16 container mx-auto pb-32">
       <div class="flex flex-col gap-16 lg:flex-row-reverse">
         <div class="bg-opacity-30 flex-none bg-beige p-6 lg:ml-auto lg:w-80 lg:bg-white lg:p-0">
           <div class="sticky top-16 mx-auto lg:mt-48">
@@ -22,6 +24,7 @@
 
 
     </div>
+    @endif
 
          @if (count($resources))
      <div class="py-16 bg-beige bg-opacity-50" id="resources">

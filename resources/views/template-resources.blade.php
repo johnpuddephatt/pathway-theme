@@ -84,7 +84,11 @@
           class="max-w-xs flex-shrink appearance-none rounded-full border border-beige px-4 py-2 pr-8 text-lg lg:px-6 lg:pr-12"
           name="key_issue">
           <option value="">All issues</option>
-
+          @foreach ($key_issues as $key => $issue)
+            <option {{ $issue->ID == ($_GET['key_issue'] ?? null) ? 'selected' : null }} value="{{ $issue->ID }}">
+              {!! $issue->post_title !!}</option>
+          @endforeach
+          <option disabled>──────────</option>
           @foreach ($issues as $key => $issue)
             <option {{ $issue->ID == ($_GET['key_issue'] ?? null) ? 'selected' : null }} value="{{ $issue->ID }}">
               {!! $issue->post_title !!}</option>
