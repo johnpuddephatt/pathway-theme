@@ -13,26 +13,26 @@ class Issue extends Composer
      * @var array
      */
     protected static $views = [
-    
+
         'partials.content-single-issue',
 
     ];
 
-    public function with() {
+    public function with()
+    {
 
         return [
             'resources' => get_posts([
                 'post_type' => 'resource',
                 'posts_per_page' => -1,
-                'order' => 'ASC',
+                'order' => 'DESC',
                 'meta_query' => [
                     [
-                    'key' => 'issues',
-                    'value' => 'post:issue:' . get_the_ID(),
+                        'key' => 'issues',
+                        'value' => 'post:issue:' . get_the_ID(),
                     ],
                 ]
             ]),
         ];
-      
     }
 }
