@@ -20,12 +20,11 @@ class EventArchive extends Composer
         return [
             "events" => new \WP_Query([
                 'post_type' => 'event',
-                'meta_key' => 'start_date',
+                // 'meta_key' => 'start_date',
                 // 'meta_type' => 'DATE',
-                'orderby' => 'meta_value',
-                'order' => 'DESC',
-                // 'orderby' => ['start_date' => 'DESC'],
-
+                // 'orderby' => 'meta_value',
+                // 'order' => 'DESC',
+                'orderby' => ['start_date' => 'ASC'],
 
                 'meta_query' => [
                     'start_date' => [
