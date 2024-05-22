@@ -9,7 +9,7 @@
         <div class="mt-2 flex-col items-center gap-4 text-blue text-opacity-80 lg:flex lg:flex-row lg:gap-6">
 
           @if (carbon_get_post_meta(get_the_ID(), 'start_date'))
-            <div>
+            <div class="whitespace-nowrap">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="mr-0.5 inline-block h-6 w-6 align-bottom opacity-50">
                 <path stroke-linecap="round" stroke-linejoin="round"
