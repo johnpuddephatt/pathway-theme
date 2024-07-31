@@ -22,9 +22,13 @@
             class="prefix__cls-1" />
         </svg>
       </div>
-      <h2 class="text-balance relative mb-6 mt-6 max-w-3xl pr-4 font-serif text-4xl md:text-5xl lg:pr-0">
-        {{ $fields->title }}
-      </h2>
+      <div>
+        <div class="-mb-3 max-w-3xl text-xl font-bold">{{ $fields->pre_title }}</div>
+        <h2 class="text-balance relative mb-6 mt-6 max-w-3xl pr-4 font-serif text-3xl md:text-4xl lg:pr-0">
+          {{ $fields->title }}
+        </h2>
+        <div class="-mt-3 max-w-3xl">{{ $fields->post_title }}</div>
+      </div>
 
       @include('partials.card-arrow', [
           'class' => 'bg-white bg-opacity-20 border-l-2 border-r-2 border-white group-hover:bg-opacity-50',
