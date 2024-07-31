@@ -23,7 +23,7 @@
         </svg>
       </div>
       <div>
-        <div class="-mb-3 max-w-3xl text-xl font-bold">{{ $fields->pre_title }}</div>
+        <div class="-mb-5 max-w-3xl text-xl font-semibold">{{ $fields->pre_title }}</div>
         <h2 class="text-balance relative mb-6 mt-6 max-w-3xl pr-4 font-serif text-3xl md:text-4xl lg:pr-0">
           {{ $fields->title }}
         </h2>
