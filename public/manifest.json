@@ -1,13 +1,13 @@
 {
-  "app.css": "css/app.f10e8a.css",
+  "app.css": "css/app.cb8907.css",
   "app.js": "js/app.411bd7.js",
-  "editor.css": "css/editor.33e81b.css",
+  "editor.css": "css/editor.553c53.css",
   "editor.js": "js/editor.9c47e3.js",
   "runtime.js": "js/runtime.00900e.js",
   "js/515.f9de99.js": "js/515.f9de99.js",
   "js/697.9c9c3d.js": "js/697.9c9c3d.js",
-  "fonts/Athelas-Regular.woff2": "fonts/Athelas-Regular.72f2ba.woff2",
-  "fonts/Euclid-Circular-B-Medium.woff2": "fonts/Euclid-Circular-B-Medium.7ebcc4.woff2",
-  "fonts/Euclid-Circular-B-SemiBold.woff2": "fonts/Euclid-Circular-B-SemiBold.75a76c.woff2",
-  "fonts/Euclid-Circular-B-Bold.woff2": "fonts/Euclid-Circular-B-Bold.e3fe0f.woff2"
+  "fonts/Athelas-Regular.woff2": "fonts/Athelas-Regular.d72f7d.woff2",
+  "fonts/EuclidCircularB-Medium-WebS.woff2": "fonts/EuclidCircularB-Medium-WebS.6487a9.woff2",
+  "fonts/EuclidCircularB-Semibold-WebS.woff2": "fonts/EuclidCircularB-Semibold-WebS.ea8c07.woff2",
+  "fonts/EuclidCircularB-Bold-WebS.woff2": "fonts/EuclidCircularB-Bold-WebS.f996f0.woff2"
 }

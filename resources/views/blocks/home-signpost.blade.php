@@ -23,11 +23,15 @@
         </svg>
       </div>
       <div>
-        <div class="-mb-5 max-w-3xl text-xl font-semibold">{{ $fields->pre_title }}</div>
+        @if (isset($fields->pre_title))
+          <div class="-mb-5 max-w-3xl text-xl font-semibold">{{ $fields->pre_title }}</div>
+        @endif
         <h2 class="text-balance relative mb-6 mt-6 max-w-3xl pr-4 font-serif text-3xl md:text-4xl lg:pr-0">
           {{ $fields->title }}
         </h2>
-        <div class="-mt-3 max-w-3xl">{{ $fields->post_title }}</div>
+        @if (isset($fields->post_title))
+          <div class="-mt-3 max-w-3xl">{{ $fields->post_title }}</div>
+        @endif
       </div>
 
       @include('partials.card-arrow', [

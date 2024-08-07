@@ -28,18 +28,18 @@
   @font-face {
     font-family: 'PWSans';
     font-weight: 700;
-    src: url(@fonts/Euclid-Circular-B-Bold.woff2) format('woff2');
+    src: url(@fonts/EuclidCircularB-Bold-WebS.woff2) format('woff2');
   }
 
   @font-face {
     font-family: 'PWSans';
     font-weight: 600;
-    src: url(@fonts/Euclid-Circular-B-SemiBold.woff2) format('woff2');
+    src: url(@fonts/EuclidCircularB-Semibold-WebS.woff2) format('woff2');
   }
 
   @font-face {
     font-family: 'PWSans';
     font-weight: 400;
-    src: url(@fonts/Euclid-Circular-B-Medium.woff2) format('woff2');
+    src: url(@fonts/EuclidCircularB-Medium-WebS.woff2) format('woff2');
   }
 }
