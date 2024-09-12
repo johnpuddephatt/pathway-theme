@@ -46,6 +46,10 @@ h3.wp-block-heading {
   @apply !not-italic text-lg text-blue font-semibold;
 }
 
+.wp-block-quote.has-background {
+  @apply pt-0 p-6;
+}
+
 .wp-block-quote.is-style-large {
   @apply border-l-0 pl-0 !my-20;
 }
@@ -92,4 +96,8 @@ summary {
 
 summary:hover {
   @apply bg-opacity-50;
+}
+
+.wp-block-media-text__content {
+  @apply pt-4 pb-4;
 }
