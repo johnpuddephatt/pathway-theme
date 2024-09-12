@@ -47,7 +47,7 @@ h3.wp-block-heading {
 }
 
 .wp-block-quote.has-background {
-  @apply pt-0 p-6;
+  @apply pt-0.5 p-6;
 }
 
 .wp-block-quote.is-style-large {
