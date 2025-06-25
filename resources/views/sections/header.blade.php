@@ -10,6 +10,12 @@
                   href="{{ $item->url }}">{!! $item->label !!}</a>
               </li>
             @endforeach
+
+            @if (is_user_logged_in())
+              <li>
+                <a class="inline-block text-blue text-opacity-75" href="{{ wp_logout_url() }}">Log out</a>
+              </li>
+            @endif
           </ul>
         </nav>
       </div>

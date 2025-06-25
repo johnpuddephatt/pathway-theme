@@ -17,6 +17,30 @@ h3.wp-block-heading {
   @apply !no-underline text-white;
 }
 
+.wp-block-file a {
+  @apply !no-underline;
+}
+
+.wp-block-file a:first-child {
+  @apply py-3;
+}
+
+.wp-block-file {
+  @apply bg-blue/10 my-4 rounded-lg overflow-hidden border border-blue/30 pl-4 leading-tight flex justify-between items-center gap-2;
+}
+
+.wp-block-file em {
+  @apply not-italic text-blue ml-2 text-opacity-60 text-xs font-normal;
+}
+
+.wp-block-file__content-wrapper {
+  @apply flex justify-between items-center gap-2;
+}
+
+.wp-block-file__button {
+  @apply rounded-none self-stretch flex items-center justify-center;
+}
+
 .wp-block-table.is-style-pills table {
   @apply border-collapse border-white bg-yellow;
 }
@@ -83,7 +107,17 @@ h3.wp-block-heading {
 }
 
 details {
-  @apply border p-4 pb-0  rounded-lg border-beige mb-4;
+  @apply border !text-base p-4 pb-0  rounded-lg border-beige mb-4;
+}
+
+.wp-block-pullout h2,
+details h2 {
+  @apply !text-xl font-semibold;
+}
+
+.wp-block-pullout h3,
+details h3 {
+  @apply !text-lg font-semibold;
 }
 
 details[open] {

@@ -115,3 +115,23 @@
 .button {
   @apply bg-white border-2 border-blue inline-block rounded-full bg-opacity-80 px-10 py-2.5 text-base font-semibold transition duration-300 hover:bg-opacity-100;
 }
+
+.manual-list > li {
+  @apply list-none  my-4 border rounded border-blue;
+}
+
+.manual-list > li > a {
+  @apply bg-blue font-semibold block text-white p-4;
+}
+
+.manual-list ul li {
+  @apply p-4;
+}
+
+.manual-list ul li a {
+  @apply block;
+}
+
+.manual-list ul li + li {
+  @apply border-t border-blue;
+}

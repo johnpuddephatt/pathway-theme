@@ -12,8 +12,32 @@ return [
     */
 
     'post' => [
-          'event' => [
+        'manual' => [
+            'enter_title_here' => 'Enter title',
+            'hierarchical' => true,
+
+            'menu_icon' => 'dashicons-book',
+            'supports' => [
+                'title',
+                'editor',
+                'excerpt',
+                'author',
+                'revisions',
+                'page-attributes',
+                'thumbnail'
+
+            ],
+            'show_in_rest' => true,
+            'has_archive' => false,
+            'labels' => [
+                'singular' => 'Manual',
+                'plural' => 'Manuals',
+            ],
+
+        ],
+        'event' => [
             'enter_title_here' => 'Enter event title',
+
             'menu_icon' => 'dashicons-calendar',
             'supports' => [
                 'title',
@@ -51,8 +75,8 @@ return [
                 'slug' => 'issues',
             ],
             'admin_cols' => [
-             
-                 'featured' => [
+
+                'featured' => [
                     'title'    => 'Featured',
                     'meta_key' => '_featured',
                 ],
@@ -63,12 +87,12 @@ return [
                     'meta_key' => '_featured',
                     'options'  => [
                         1   => 'Featured',
-                        0   => 'Normal',	
+                        0   => 'Normal',
                     ]
                 ],
             ],
         ],
-         'vacancy' => [
+        'vacancy' => [
             'enter_title_here' => 'Enter vacancy title',
             'menu_icon' => 'dashicons-pressthis',
             'supports' => ['title', 'editor', 'author', 'revisions'],
@@ -80,48 +104,48 @@ return [
             ],
             'template' => [
                 [
-                    'core/heading', 
+                    'core/heading',
                     [
                         'level' => 2,
-                        'placeholder' => 'Enter heading', 
+                        'placeholder' => 'Enter heading',
                         'content' => 'About the role'
                     ]
                 ],
                 [
                     'core/paragraph',
                     [
-                        'placeholder' => 'Lorem ipsum dolar amet...', 
+                        'placeholder' => 'Lorem ipsum dolar amet...',
                     ]
                 ],
                 [
-                    'core/heading', 
+                    'core/heading',
                     [
                         'level' => 2,
-                        'placeholder' => 'Enter heading', 
+                        'placeholder' => 'Enter heading',
                         'content' => 'About Pathway'
                     ]
                 ],
                 [
                     'core/paragraph',
                     [
-                        'placeholder' => 'Lorem ipsum dolar amet...', 
+                        'placeholder' => 'Lorem ipsum dolar amet...',
                     ]
                 ],
- [
-                    'core/heading', 
+                [
+                    'core/heading',
                     [
                         'level' => 2,
-                        'placeholder' => 'Enter heading', 
+                        'placeholder' => 'Enter heading',
                         'content' => 'How to apply'
                     ]
                 ],
                 [
                     'core/paragraph',
                     [
-                        'placeholder' => 'Lorem ipsum dolar amet...', 
+                        'placeholder' => 'Lorem ipsum dolar amet...',
                     ]
                 ],
- 
+
             ]
         ],
         'press_release' => [
@@ -149,11 +173,11 @@ return [
                 'slug' => 'people',
             ],
             'admin_cols' => [
-              'role_type' => [
+                'role_type' => [
                     'taxonomy' => 'role_type'
                 ],
-                 'role_title' => [
-                    'title_cb'    => function() {
+                'role_title' => [
+                    'title_cb'    => function () {
                         return 'Role title';
                     },
                     'meta_key'    => '_role_title',
@@ -176,23 +200,23 @@ return [
                 'plural' => 'Resources',
             ],
             'admin_cols' => [
-              'resource_type' => [
+                'resource_type' => [
                     'taxonomy' => 'resource_type'
                 ],
-                 'key issue' => [
+                'key issue' => [
 
-                    'title_cb'    => function() {
+                    'title_cb'    => function () {
                         return 'Key issues';
                     },
-                    'function' => function() {
+                    'function' => function () {
                         global $post;
 
-                        $ids = array_reduce(carbon_get_post_meta( get_the_ID(), 'issues' ), function($carry, $item) {
+                        $ids = array_reduce(carbon_get_post_meta(get_the_ID(), 'issues'), function ($carry, $item) {
                             $carry[] = $item['id'];
                             return $carry;
                         }, []);
 
-                        if(!$ids) return false;
+                        if (!$ids) return false;
 
                         $issues = get_posts([
                             'post_type' => 'issue',
@@ -200,11 +224,9 @@ return [
                             'post__in' => $ids,
                         ]);
 
-                        foreach($issues as $issue) {
+                        foreach ($issues as $issue) {
                             echo '– ' . $issue->post_title . '<br>';
                         }
-
-           
                     }
 
                 ],
@@ -215,7 +237,7 @@ return [
                 ],
             ],
         ],
-        
+
         // 'team' => [
         //     'enter_title_here' => 'Enter team name',
         //     'menu_icon' => 'dashicons-groups',
