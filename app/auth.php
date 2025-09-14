@@ -15,6 +15,16 @@ add_role('manual', 'Manual user', array(
     'delete_posts' => false, // Use false to explicitly deny
 ));
 
+
+
+add_filter('login_redirect', function ($redirect_to, $request, $user) {
+    // Only redirect if login was successful and user has the specific role
+    if (isset($user->roles) && in_array('manual', $user->roles)) {
+        return home_url('/manuals/partnership-programme-manual/'); // Replace with your target page
+    }
+    return $redirect_to; // Default redirect for all other users
+}, 10, 3); // Uncomment to use this version instead
+
 add_action(
     'template_redirect',
     function () {
