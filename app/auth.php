@@ -9,6 +9,12 @@ namespace App;
 use function Roots\bundle;
 
 
+add_role('manual', 'Manual user', array(
+    'read' => true, // True allows that capability
+    'edit_posts' => false,
+    'delete_posts' => false, // Use false to explicitly deny
+));
+
 add_action(
     'template_redirect',
     function () {

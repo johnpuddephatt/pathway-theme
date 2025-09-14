@@ -238,6 +238,8 @@ return [
             ],
         ],
 
+
+
         // 'team' => [
         //     'enter_title_here' => 'Enter team name',
         //     'menu_icon' => 'dashicons-groups',
@@ -266,6 +268,8 @@ return [
     | Extended CPTs library. <https://github.com/johnbillion/extended-cpts>
     |
     */
+
+
 
     'taxonomy' => [
         'resource_type' => [
