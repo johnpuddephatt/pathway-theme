@@ -16,6 +16,45 @@ add_role('manual', 'Manual user', array(
 ));
 
 
+add_action('after_setup_theme', function () {
+    $current_user = wp_get_current_user();
+    $blocked_roles = array('subscriber', 'manual');
+
+    if (!empty(array_intersect($blocked_roles, $current_user->roles))) {
+        // Remove from frontend
+        show_admin_bar(false);
+
+        // Remove admin bar CSS and JS
+        remove_action('wp_head', '_admin_bar_bump_cb');
+
+        // Remove admin bar initialization
+        add_filter('show_admin_bar', '__return_false');
+    }
+});
+
+
+add_action('admin_init', function () {
+    // Get current user
+    $user = wp_get_current_user();
+
+    // Check if user is logged in and not doing AJAX
+    if (!empty($user->roles) && !wp_doing_ajax()) {
+
+        // Define roles that should be blocked from admin area
+        $blocked_roles = array('subscriber', 'manual'); // Add your roles here
+
+        // Check if user has any of the blocked roles
+        foreach ($blocked_roles as $role) {
+            if (in_array($role, $user->roles)) {
+                // Redirect to front-end (you can customize this URL)
+                wp_redirect(home_url('/manuals/partnership-programme-manual/')); // Change to your preferred page
+                exit;
+            }
+        }
+    }
+});
+
+
 
 add_filter('login_redirect', function ($redirect_to, $request, $user) {
     // Only redirect if login was successful and user has the specific role
