@@ -92,7 +92,9 @@ add_action(
 
         if (!$has_access) {
             $parents = get_post_ancestors(get_the_ID());
-            wp_redirect(get_permalink(end($parents)) . '?access_denied=true', 301);
+            // 302 + no-cache: this depends on who is logged in, so browsers must never cache it.
+            nocache_headers();
+            wp_redirect(get_permalink(end($parents)) . '?access_denied=true', 302);
             exit;
         }
     }
